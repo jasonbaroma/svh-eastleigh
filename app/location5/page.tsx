@@ -20,26 +20,26 @@ import {
 } from "lucide-react";
 
 export default function LocationPage() {
-  const locationLinks = buildLocationLinks("{{LOCATION_5_NAME}}");
-  const heroImage = { src: "/images/location5-image1.jpeg", alt: "{{LOCATION5_IMAGE_1_ALT}}" };
-  const supportImage = { src: "/images/location5-image2.jpeg", alt: "{{LOCATION5_IMAGE_2_ALT}}" };
+  const locationLinks = buildLocationLinks("Netley");
+  const heroImage = { src: "/images/location5-image1.jpeg", alt: "Clean hire van on a coastal-edge road with water nearby in Netley" };
+  const supportImage = { src: "/images/location5-image2.jpeg", alt: "Family loading bags into a rental van before a trip in Netley" };
   const faqs = [
-    { question: "{{LOCATION5_FAQ_1_QUESTION}}", answer: "{{LOCATION5_FAQ_1_ANSWER}}" },
-    { question: "{{LOCATION5_FAQ_2_QUESTION}}", answer: "{{LOCATION5_FAQ_2_ANSWER}}" },
-    { question: "{{LOCATION5_FAQ_3_QUESTION}}", answer: "{{LOCATION5_FAQ_3_ANSWER}}" },
-    { question: "{{LOCATION5_FAQ_4_QUESTION}}", answer: "{{LOCATION5_FAQ_4_ANSWER}}" },
-    { question: "{{LOCATION5_FAQ_5_QUESTION}}", answer: "{{LOCATION5_FAQ_5_ANSWER}}" },
+    { question: "Can you deliver a hire vehicle to Netley?", answer: "Yes, delivery and collection can often be arranged in and around Netley depending on the booking details and vehicle type." },
+    { question: "Do you offer short-term hire in Netley?", answer: "Yes, many customers hire for short periods such as a day or weekend, subject to availability and the type of vehicle needed." },
+    { question: "Can I hire something other than a van in Netley?", answer: "Usually yes. We offer vans, cars, minibuses and trucks, so the best vehicle depends on passenger numbers, load size and your route." },
+    { question: "What licence do I need to hire a vehicle?", answer: "A standard driving licence may be enough for many vehicles, but this depends on the category and your licence entitlement." },
+    { question: "Is longer-term hire available in Netley?", answer: "Longer hires can often be arranged if you need a vehicle for ongoing personal use, contract work or business support." },
   ];
   const trustCards = [
-    { title: "{{LOCATION5_TRUST_CARD_1_TITLE}}", description: "{{LOCATION5_TRUST_CARD_1_DESCRIPTION}}", icon: ShieldCheck },
-    { title: "{{LOCATION5_TRUST_CARD_2_TITLE}}", description: "{{LOCATION5_TRUST_CARD_2_DESCRIPTION}}", icon: Star },
-    { title: "{{LOCATION5_TRUST_CARD_3_TITLE}}", description: "{{LOCATION5_TRUST_CARD_3_DESCRIPTION}}", icon: Users },
+    { title: "Maintained fleet", description: "Our vehicles are kept ready for everyday personal and business use, with practicality leading the service.", icon: ShieldCheck },
+    { title: "Flexible hire terms", description: "From one-day bookings to longer hires, we help arrange a rental period that matches the job.", icon: Star },
+    { title: "Straightforward service", description: "Delivery, collection and clear booking support help keep the whole process easier to manage.", icon: Users },
   ];
   const featureStats = [
-    { value: "Car Hire", label: "{{LOCATION5_FEATURE_CARD_1_DESCRIPTION}}" },
-    { value: "Van Hire", label: "{{LOCATION5_FEATURE_CARD_2_DESCRIPTION}}" },
-    { value: "Minibus Hire", label: "{{LOCATION5_FEATURE_CARD_3_DESCRIPTION}}" },
-    { value: "Truck Hire", label: "{{LOCATION5_FEATURE_CARD_4_DESCRIPTION}}" },
+    { value: "Car Hire", label: "Practical vans for moving, collecting and delivery work." },
+    { value: "Van Hire", label: "Cars for everyday travel, temporary use and local journeys." },
+    { value: "Minibus Hire", label: "Minibuses for group transport, events and organised trips." },
+    { value: "Truck Hire", label: "Trucks for heavier loads and larger commercial jobs." },
   ];
   const vehicleCards = [
     { src: "/images/smallvan1.jpg", alt: "Small van hire vehicle", title: "Small Vans" },
@@ -52,9 +52,9 @@ export default function LocationPage() {
     { src: "/images/7.5tonnecurtainsidehire.jpg", alt: "7.5 tonne curtainside truck hire vehicle", title: "Truck Hire" },
   ];
   const benefits = [
-    { icon: BadgePoundSterling, title: "{{LOCATION5_BENEFIT_1_TITLE}}", description: "{{LOCATION5_BENEFIT_1_DESCRIPTION}}", detail: "{{LOCATION5_BENEFIT_1_DETAIL}}" },
-    { icon: Clock3, title: "{{LOCATION5_BENEFIT_2_TITLE}}", description: "{{LOCATION5_BENEFIT_2_DESCRIPTION}}", detail: "{{LOCATION5_BENEFIT_2_DETAIL}}" },
-    { icon: CheckCircle2, title: "{{LOCATION5_BENEFIT_3_TITLE}}", description: "{{LOCATION5_BENEFIT_3_DESCRIPTION}}", detail: "{{LOCATION5_BENEFIT_3_DETAIL}}" },
+    { icon: BadgePoundSterling, title: "More than just van hire", description: "We cover a wide range of transport needs with cars, vans, minibuses and trucks in one practical hire service.", detail: "That makes it easier to sort personal transport, business bookings and larger jobs through one provider." },
+    { icon: Clock3, title: "Rental periods that fit the job", description: "Flexible booking periods help you hire for the time you actually need rather than forcing a rigid arrangement.", detail: "It is useful for moving days, temporary business support, weekend plans and longer-running work." },
+    { icon: CheckCircle2, title: "Clear and helpful from the start", description: "Our service is built to be straightforward, with practical help on choosing a suitable vehicle and arranging the booking.", detail: "For Bursledon customers, that means less guesswork and a more usable self-drive rental experience." },
   ];
 
   return (
@@ -103,8 +103,8 @@ export default function LocationPage() {
           <div className="relative z-10 grid gap-12 lg:grid-cols-[1fr_420px] lg:items-center">
             <div className="max-w-3xl">
               <div className="flex flex-col gap-6">
-                <h1 className="text-5xl font-bold tracking-tight">{"{{LOCATION5_HERO_TITLE}}"}</h1>
-                <p className="text-xl text-white">{"{{LOCATION5_HERO_SUBTITLE}}"}</p>
+                <h1 className="text-5xl font-bold tracking-tight">{"Vehicle Hire in Netley Made Simple"}</h1>
+                <p className="text-xl text-white">{"Self-drive vans, cars, minibuses and trucks with flexible booking, maintained vehicles and practical support for local and longer-distance travel."}</p>
                 <Button size="lg" className="w-fit bg-[#00B395] text-white hover:bg-[#00997f]" asChild>
                   <a href={phoneHref}>Book Now</a>
                 </Button>
@@ -127,18 +127,18 @@ export default function LocationPage() {
               <div className="max-w-2xl">
                 <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-[#00B395]/25 bg-white px-3 py-1 text-sm font-medium text-[#00B395]">
                   <PhoneCall className="h-4 w-4" />
-                  {"{{LOCATION5_BOOKING_BADGE_TEXT}}"}
+                  {"Flexible bookings across Bursledon"}
                 </div>
-                <h2 className="text-2xl font-bold tracking-tight text-slate-950 md:text-3xl">{"{{LOCATION5_BOOKING_SECTION_TITLE}}"}</h2>
-                <p className="mt-3 text-base leading-7 text-slate-600">{"{{LOCATION5_BOOKING_SECTION_DESCRIPTION}}"}</p>
+                <h2 className="text-2xl font-bold tracking-tight text-slate-950 md:text-3xl">{"Simple vehicle hire for Netley journeys"}</h2>
+                <p className="mt-3 text-base leading-7 text-slate-600">{"Booking hire in Netley is kept straightforward. Tell us what you need the vehicle for, how long you need it, and whether delivery or collection would help, and we will work around the job where possible."}</p>
                 <div className="mt-5 flex flex-wrap gap-3 text-sm text-slate-600">
                   <div className="inline-flex items-center gap-2 rounded-full bg-white px-4 py-2 shadow-sm">
                     <PhoneCall className="h-4 w-4 text-[#00B395]" />
-                    {"{{LOCATION5_BOOKING_FEATURE_1}}"}
+                    {"Flexible self-drive hire"}
                   </div>
                   <div className="inline-flex items-center gap-2 rounded-full bg-white px-4 py-2 shadow-sm">
                     <Clock3 className="h-4 w-4 text-[#00B395]" />
-                    {"{{LOCATION5_BOOKING_FEATURE_2}}"}
+                    {"Delivery and collection available"}
                   </div>
                 </div>
               </div>
@@ -153,8 +153,8 @@ export default function LocationPage() {
       <section id="trust" className="px-6 py-16">
         <div className="mx-auto max-w-6xl">
           <div className="mb-12 text-center">
-            <h2 className="mb-4 text-4xl font-bold">{"{{LOCATION5_TRUST_SECTION_TITLE}}"}</h2>
-            <p className="text-lg text-muted-foreground">{"{{LOCATION5_TRUST_SECTION_DESCRIPTION}}"}</p>
+            <h2 className="mb-4 text-4xl font-bold">{"A practical hire service for Netley customers"}</h2>
+            <p className="text-lg text-muted-foreground">{"People booking in Netley usually want a reliable vehicle, sensible booking options and support that feels easy to deal with. That is what we focus on."}</p>
           </div>
           <div className="grid gap-8 md:grid-cols-3 md:auto-rows-fr">
             {trustCards.map((item) => (
@@ -173,9 +173,9 @@ export default function LocationPage() {
       <section className="bg-white px-6 py-20 text-slate-950">
         <div className="mx-auto grid max-w-6xl gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
           <div>
-            <p className="mb-4 text-sm font-semibold uppercase tracking-[0.3em] text-[#00B395]">{"{{LOCATION5_FEATURE_SECTION_KICKER}}"}</p>
-            <h2 className="max-w-2xl text-4xl font-bold tracking-tight md:text-5xl">{"{{LOCATION5_FEATURE_SECTION_TITLE}}"}</h2>
-            <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-600">{"{{LOCATION5_FEATURE_SECTION_DESCRIPTION}}"}</p>
+            <p className="mb-4 text-sm font-semibold uppercase tracking-[0.3em] text-[#00B395]">{"Our vehicle range"}</p>
+            <h2 className="max-w-2xl text-4xl font-bold tracking-tight md:text-5xl">{"Hire options available around Netley"}</h2>
+            <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-600">{"From local residential moves to business transport and group travel, we offer a useful mix of hire vehicles for Netley customers."}</p>
             <div className="mt-8 flex flex-wrap gap-4">
               <Button size="lg" className="bg-[#00B395] text-white hover:bg-[#00997f]" asChild>
                 <a href={phoneHref}>No Hassle Booking {phoneDisplay}</a>
@@ -195,13 +195,13 @@ export default function LocationPage() {
 
       <section className="bg-white px-6 py-20">
         <div className="mx-auto max-w-5xl text-center">
-          <p className="mb-4 text-sm font-semibold uppercase tracking-[0.3em] text-[#00B395]">{"{{LOCATION5_CONTENT_SECTION_KICKER}}"}</p>
-          <h2 className="mx-auto max-w-3xl text-4xl font-bold tracking-tight text-slate-950 md:text-5xl">{"{{LOCATION5_CONTENT_SECTION_TITLE}}"}</h2>
+          <p className="mb-4 text-sm font-semibold uppercase tracking-[0.3em] text-[#00B395]">{"Why people book with us"}</p>
+          <h2 className="mx-auto max-w-3xl text-4xl font-bold tracking-tight text-slate-950 md:text-5xl">{"Dependable hire that suits how Netley drivers travel"}</h2>
           <div className="mx-auto mt-8 max-w-3xl space-y-6 text-lg leading-8 text-slate-600">
-            <p>{"{{LOCATION5_CONTENT_SECTION_PARAGRAPH_1}}"}</p>
-            <p>{"{{LOCATION5_CONTENT_SECTION_PARAGRAPH_2}}"}</p>
-            <p>{"{{LOCATION5_CONTENT_SECTION_PARAGRAPH_3}}"}</p>
-            <p>{"{{LOCATION5_CONTENT_SECTION_PARAGRAPH_4}}"}</p>
+            <p>{"Netley bookings are often about practical transport rather than extras for the sake of it. Some customers need a van for moving household items, others need a car for temporary travel, while businesses may need a minibus or truck to keep work moving."}</p>
+            <p>{"Southern Van Hire focuses on keeping that process clear. We offer a broad choice of self-drive vehicles, sensible rental periods, and support for one-off hires as well as longer requirements."}</p>
+            <p>{"Vehicles are prepared to a good standard and suited to everyday use, whether you are heading along Portsmouth Road, joining the M27, or making deliveries around Southampton Water and the wider Hampshire area."}</p>
+            <p>{"Because Netley sits between residential roads, waterfront routes and busy connections into the city, it helps to hire from a company that understands both local access and wider travel needs. That is where a dependable, no-fuss service makes the difference."}</p>
           </div>
         </div>
       </section>
@@ -210,9 +210,9 @@ export default function LocationPage() {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(0,179,149,0.14),_transparent_55%)] pointer-events-none" />
         <div className="mx-auto max-w-6xl">
           <div className="mx-auto mb-14 max-w-3xl text-center">
-            <p className="mb-4 text-sm font-semibold uppercase tracking-[0.3em] text-[#00B395]">{"{{LOCATION5_BENEFITS_SECTION_KICKER}}"}</p>
-            <h2 className="text-4xl font-bold tracking-tight text-slate-950 md:text-5xl">{"{{LOCATION5_BENEFITS_SECTION_TITLE}}"}</h2>
-            <p className="mt-5 text-lg leading-8 text-slate-600">{"{{LOCATION5_BENEFITS_SECTION_DESCRIPTION}}"}</p>
+            <p className="mb-4 text-sm font-semibold uppercase tracking-[0.3em] text-[#00B395]">{"At a glance"}</p>
+            <h2 className="text-4xl font-bold tracking-tight text-slate-950 md:text-5xl">{"Benefits of hiring in Bursledon with us"}</h2>
+            <p className="mt-5 text-lg leading-8 text-slate-600">{"A simple summary of what customers in Bursledon often find most useful when choosing us for vehicle hire."}</p>
           </div>
           <div className="grid gap-8 md:grid-cols-3">
             {benefits.map((item) => (
@@ -254,8 +254,8 @@ export default function LocationPage() {
         <div className="mx-auto max-w-5xl">
           <div className="mx-auto max-w-3xl text-center">
             <p className="mb-4 text-sm font-semibold uppercase tracking-[0.3em] text-[#00B395]">{"Nearby Locations"}</p>
-            <h2 className="text-3xl font-bold tracking-tight text-slate-950 md:text-4xl">{"{{LOCATION5_NEARBY_LOCATIONS_SECTION_TITLE}}"}</h2>
-            <p className="mt-4 text-lg leading-8 text-slate-600">{"{{LOCATION5_NEARBY_LOCATIONS_SECTION_INTRO}}"}</p>
+            <h2 className="text-3xl font-bold tracking-tight text-slate-950 md:text-4xl">{"Also covering places near Netley"}</h2>
+            <p className="mt-4 text-lg leading-8 text-slate-600">{"If Netley is not the most convenient pickup point for your plans, we also cover nearby towns and villages around Southampton Water and Eastleigh."}</p>
           </div>
           <div className="mt-8 flex flex-wrap justify-center gap-3">
             {locationLinks.map((location) => (
@@ -266,16 +266,16 @@ export default function LocationPage() {
           </div>
           <div className="mt-12 grid gap-6 md:grid-cols-3">
             <div className="rounded-3xl border border-slate-200 bg-slate-50 p-6 shadow-sm">
-              <h3 className="text-2xl font-semibold tracking-tight text-slate-950">{"{{LOCATION5_INFO_CONTENT_BLOCK_1_TITLE}}"}</h3>
-              <p className="mt-3 text-base leading-7 text-slate-600">{"{{LOCATION5_INFO_CONTENT_BLOCK_1_BODY}}"}</p>
+              <h3 className="text-2xl font-semibold tracking-tight text-slate-950">{"A vehicle for different jobs"}</h3>
+              <p className="mt-3 text-base leading-7 text-slate-600">{"Choose from a broad range of hire vehicles for personal transport, business use, moving jobs and planned trips."}</p>
             </div>
             <div className="rounded-3xl border border-slate-200 bg-slate-50 p-6 shadow-sm">
-              <h3 className="text-2xl font-semibold tracking-tight text-slate-950">{"{{LOCATION5_INFO_CONTENT_BLOCK_2_TITLE}}"}</h3>
-              <p className="mt-3 text-base leading-7 text-slate-600">{"{{LOCATION5_INFO_CONTENT_BLOCK_2_BODY}}"}</p>
+              <h3 className="text-2xl font-semibold tracking-tight text-slate-950">{"Hire periods that work for you"}</h3>
+              <p className="mt-3 text-base leading-7 text-slate-600">{"Short-term and longer bookings are available, helping you match the vehicle to the job instead of overcommitting."}</p>
             </div>
             <div className="rounded-3xl border border-slate-200 bg-slate-50 p-6 shadow-sm">
-              <h3 className="text-2xl font-semibold tracking-tight text-slate-950">{"{{LOCATION5_INFO_CONTENT_BLOCK_3_TITLE}}"}</h3>
-              <p className="mt-3 text-base leading-7 text-slate-600">{"{{LOCATION5_INFO_CONTENT_BLOCK_3_BODY}}"}</p>
+              <h3 className="text-2xl font-semibold tracking-tight text-slate-950">{"Prepared for the road"}</h3>
+              <p className="mt-3 text-base leading-7 text-slate-600">{"Well-presented rental vehicles and straightforward service help keep journeys, deliveries and collections running smoothly."}</p>
             </div>
           </div>
         </div>
@@ -285,14 +285,14 @@ export default function LocationPage() {
         <div className="mx-auto max-w-5xl">
           <div className="mx-auto max-w-3xl text-center">
             <p className="mb-4 text-sm font-semibold uppercase tracking-[0.3em] text-[#00B395]">{"Local Guide"}</p>
-            <h2 className="text-4xl font-bold tracking-tight text-slate-950 md:text-5xl">{"{{LOCATION5_LOCAL_GUIDE_SECTION_TITLE}}"}</h2>
-            <p className="mt-5 text-lg leading-8 text-slate-600">{"{{LOCATION5_LOCAL_GUIDE_SECTION_DESCRIPTION}}"}</p>
+            <h2 className="text-4xl font-bold tracking-tight text-slate-950 md:text-5xl">{"Driving and hire tips for Netley"}</h2>
+            <p className="mt-5 text-lg leading-8 text-slate-600">{"Useful local driving notes for getting in and out of Netley smoothly, with practical planning tips for village roads, fuel stops and longer onward travel."}</p>
           </div>
           <div className="mx-auto mt-12 max-w-4xl space-y-6 text-left">
-            <p className="text-base leading-8 text-slate-600">{"{{LOCATION5_LOCAL_GUIDE_PARAGRAPH_1}}"}</p>
-            <p className="text-base leading-8 text-slate-600">{"{{LOCATION5_LOCAL_GUIDE_PARAGRAPH_2}}"}</p>
-            <p className="text-base leading-8 text-slate-600">{"{{LOCATION5_LOCAL_GUIDE_PARAGRAPH_3}}"}</p>
-            <p className="text-base leading-8 text-slate-600">{"{{LOCATION5_LOCAL_GUIDE_PARAGRAPH_4}}"}</p>
+            <p className="text-base leading-8 text-slate-600">{"Netley is well placed for short local hires as well as longer trips, with easy access into the wider Eastleigh and Southampton area. If you are collecting furniture, handling small business runs or planning a home move, it helps to set off outside the busiest commuter periods so you can get through local residential roads with less delay."}</p>
+            <p className="text-base leading-8 text-slate-600">{"Because Netley is a village setting, larger vehicles are often easiest to manage when you plan your loading point in advance. Check where you will stop, allow extra room for reversing, and think about the best direction to leave from if you are joining main local routes soon after pickup."}</p>
+            <p className="text-base leading-8 text-slate-600">{"For longer drives, it is worth sorting fuel and essentials before you get too far into the day. An Esso site is available within the wider area, which can be useful for topping up before a return journey or before heading out on a longer hire across Hampshire and beyond."}</p>
+            <p className="text-base leading-8 text-slate-600">{"Netley hires often suit practical jobs rather than complicated travel plans, so a simple route usually works best. If you are using a van, car, minibus or truck for deliveries, family transport or moving day duties, choosing quieter start times and allowing for village access can make the whole journey more straightforward."}</p>
           </div>
         </div>
       </section>
@@ -300,9 +300,9 @@ export default function LocationPage() {
       <section className="bg-white px-6 py-20">
         <div className="mx-auto max-w-4xl">
           <div className="mb-12 text-center">
-            <p className="mb-4 text-sm font-semibold uppercase tracking-[0.3em] text-[#00B395]">{"{{LOCATION5_FAQ_SECTION_KICKER}}"}</p>
-            <h2 className="text-4xl font-bold tracking-tight text-slate-950 md:text-5xl">{"{{LOCATION5_FAQ_SECTION_TITLE}}"}</h2>
-            <p className="mt-4 text-lg leading-8 text-slate-600">{"{{LOCATION5_FAQ_SECTION_DESCRIPTION}}"}</p>
+            <p className="mb-4 text-sm font-semibold uppercase tracking-[0.3em] text-[#00B395]">{"Netley hire questions"}</p>
+            <h2 className="text-4xl font-bold tracking-tight text-slate-950 md:text-5xl">{"Frequently asked questions for Netley"}</h2>
+            <p className="mt-4 text-lg leading-8 text-slate-600">{"Answers to common questions about booking, delivery, vehicle choice and hire periods in Netley."}</p>
           </div>
           <div className="rounded-3xl border border-slate-200 bg-slate-50 px-6 shadow-sm">
             {faqs.map((item, index) => (
@@ -320,8 +320,8 @@ export default function LocationPage() {
 
       <section className="bg-[#00B395] px-6 py-16 text-center text-white">
         <div className="mx-auto max-w-2xl">
-          <h2 className="mb-4 text-4xl font-bold">{"{{LOCATION5_CTA_TITLE}}"}</h2>
-          <p className="mb-8 text-lg text-white/85">{"{{LOCATION5_CTA_DESCRIPTION}}"}</p>
+          <h2 className="mb-4 text-4xl font-bold">{"Need to arrange vehicle hire in Netley?"}</h2>
+          <p className="mb-8 text-lg text-white/85">{"If you need a car, van, minibus or truck in Netley, we can help you choose a practical option and arrange a hire that fits your timing."}</p>
           <Button size="lg" className="bg-white text-[#00B395] hover:bg-gray-100" asChild>
             <a href={phoneHref}>Book Now</a>
           </Button>

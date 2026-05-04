@@ -20,26 +20,26 @@ import {
 } from "lucide-react";
 
 export default function LocationPage() {
-  const locationLinks = buildLocationLinks("{{LOCATION_1_NAME}}");
-  const heroImage = { src: "/images/location1-image1.jpeg", alt: "{{LOCATION1_IMAGE_1_ALT}}" };
-  const supportImage = { src: "/images/location1-image2.jpeg", alt: "{{LOCATION1_IMAGE_2_ALT}}" };
+  const locationLinks = buildLocationLinks("Hamble-le-Rice");
+  const heroImage = { src: "/images/location1-image1.jpeg", alt: "Clean white hire van parked near a marina-side road in Hamble-le-Rice" };
+  const supportImage = { src: "/images/location1-image2.jpeg", alt: "People loading bags and boxes into a clean hire van on a quiet street in Hamble-le-Rice" };
   const faqs = [
-    { question: "{{LOCATION1_FAQ_1_QUESTION}}", answer: "{{LOCATION1_FAQ_1_ANSWER}}" },
-    { question: "{{LOCATION1_FAQ_2_QUESTION}}", answer: "{{LOCATION1_FAQ_2_ANSWER}}" },
-    { question: "{{LOCATION1_FAQ_3_QUESTION}}", answer: "{{LOCATION1_FAQ_3_ANSWER}}" },
-    { question: "{{LOCATION1_FAQ_4_QUESTION}}", answer: "{{LOCATION1_FAQ_4_ANSWER}}" },
-    { question: "{{LOCATION1_FAQ_5_QUESTION}}", answer: "{{LOCATION1_FAQ_5_ANSWER}}" },
+    { question: "Can I arrange vehicle hire in Hamble-le-Rice?", answer: "Yes, we can arrange vehicle hire for customers in Hamble-le-Rice, subject to availability and booking details. Let us know what you need and when, and we will advise on the most practical option." },
+    { question: "Do you offer delivery and collection in Hamble-le-Rice?", answer: "Yes, delivery and collection can often be arranged for Hamble-le-Rice bookings, depending on the vehicle type and hire period. It is a useful option if you want to keep things simple around the marina and village area." },
+    { question: "What types of vehicles can I hire in Hamble-le-Rice?", answer: "We offer a range of self-drive vehicles including vans, cars, minibuses and trucks, depending on availability. If you are moving items, travelling as a group or need extra load space from Hamble-le-Rice, we can help you choose a suitable vehicle." },
+    { question: "Is short-term hire available in Hamble-le-Rice?", answer: "Yes, business customers can hire vehicles for deliveries, temporary cover, site visits and other transport requirements." },
+    { question: "Can businesses in Hamble-le-Rice arrange regular vehicle hire?", answer: "The best option depends on passenger numbers, load size, access at the destination and how far you are travelling." },
   ];
   const trustCards = [
-    { title: "{{LOCATION1_TRUST_CARD_1_TITLE}}", description: "{{LOCATION1_TRUST_CARD_1_DESCRIPTION}}", icon: ShieldCheck },
-    { title: "{{LOCATION1_TRUST_CARD_2_TITLE}}", description: "{{LOCATION1_TRUST_CARD_2_DESCRIPTION}}", icon: Star },
-    { title: "{{LOCATION1_TRUST_CARD_3_TITLE}}", description: "{{LOCATION1_TRUST_CARD_3_DESCRIPTION}}", icon: Users },
+    { title: "Reliable vehicles", description: "Maintained vehicles prepared for private bookings, trade use and general transport needs.", icon: ShieldCheck },
+    { title: "Straightforward service", description: "Helpful booking support and flexible rental arrangements make it easier to plan around your day.", icon: Star },
+    { title: "Choice across categories", description: "A broad fleet means Bishopstoke customers can hire the right type of vehicle in one place.", icon: Users },
   ];
   const featureStats = [
-    { value: "Car Hire", label: "{{LOCATION1_FEATURE_CARD_1_DESCRIPTION}}" },
-    { value: "Van Hire", label: "{{LOCATION1_FEATURE_CARD_2_DESCRIPTION}}" },
-    { value: "Minibus Hire", label: "{{LOCATION1_FEATURE_CARD_3_DESCRIPTION}}" },
-    { value: "Truck Hire", label: "{{LOCATION1_FEATURE_CARD_4_DESCRIPTION}}" },
+    { value: "Car Hire", label: "Van hire for moves, local collections and practical transport jobs around Bishopstoke." },
+    { value: "Van Hire", label: "Car hire for everyday travel, appointments and business trips from Bishopstoke." },
+    { value: "Minibus Hire", label: "Minibus hire for family outings, events and group journeys from the village." },
+    { value: "Truck Hire", label: "Truck hire for heavier loads and larger commercial transport requirements." },
   ];
   const vehicleCards = [
     { src: "/images/smallvan1.jpg", alt: "Small van hire vehicle", title: "Small Vans" },
@@ -52,9 +52,9 @@ export default function LocationPage() {
     { src: "/images/7.5tonnecurtainsidehire.jpg", alt: "7.5 tonne curtainside truck hire vehicle", title: "Truck Hire" },
   ];
   const benefits = [
-    { icon: BadgePoundSterling, title: "{{LOCATION1_BENEFIT_1_TITLE}}", description: "{{LOCATION1_BENEFIT_1_DESCRIPTION}}", detail: "{{LOCATION1_BENEFIT_1_DETAIL}}" },
-    { icon: Clock3, title: "{{LOCATION1_BENEFIT_2_TITLE}}", description: "{{LOCATION1_BENEFIT_2_DESCRIPTION}}", detail: "{{LOCATION1_BENEFIT_2_DETAIL}}" },
-    { icon: CheckCircle2, title: "{{LOCATION1_BENEFIT_3_TITLE}}", description: "{{LOCATION1_BENEFIT_3_DESCRIPTION}}", detail: "{{LOCATION1_BENEFIT_3_DETAIL}}" },
+    { icon: BadgePoundSterling, title: "Well connected location", description: "Good access to Eastleigh, Fair Oak and Southampton makes local and regional trips easier to plan.", detail: "Bishopstoke is well placed for short local runs as well as longer journeys onto the M3 and M27 corridors, making it a useful base for both private and business hire." },
+    { icon: Clock3, title: "Fleet options for different jobs", description: "Choose a vehicle that suits removals, errands, business work or passenger travel.", detail: "From compact cars to larger vans and minibuses, the right vehicle can save time and keep your day running more smoothly." },
+    { icon: CheckCircle2, title: "Flexible around your schedule", description: "Flexible hire periods help if your plans are fixed, changing or likely to run longer.", detail: "That can be especially useful for house moves, temporary business cover or projects that need transport beyond a single day." },
   ];
 
   return (
@@ -103,8 +103,8 @@ export default function LocationPage() {
           <div className="relative z-10 grid gap-12 lg:grid-cols-[1fr_420px] lg:items-center">
             <div className="max-w-3xl">
               <div className="flex flex-col gap-6">
-                <h1 className="text-5xl font-bold tracking-tight">{"{{LOCATION1_HERO_TITLE}}"}</h1>
-                <p className="text-xl text-white">{"{{LOCATION1_HERO_SUBTITLE}}"}</p>
+                <h1 className="text-5xl font-bold tracking-tight">{"Vehicle Hire in Hamble-le-Rice Made Simple"}</h1>
+                <p className="text-xl text-white">{"Self-drive van, car, minibus and truck hire for Bishopstoke with flexible booking and practical support from Southern Van Hire."}</p>
                 <Button size="lg" className="w-fit bg-[#00B395] text-white hover:bg-[#00997f]" asChild>
                   <a href={phoneHref}>Book Now</a>
                 </Button>
@@ -127,18 +127,18 @@ export default function LocationPage() {
               <div className="max-w-2xl">
                 <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-[#00B395]/25 bg-white px-3 py-1 text-sm font-medium text-[#00B395]">
                   <PhoneCall className="h-4 w-4" />
-                  {"{{LOCATION1_BOOKING_BADGE_TEXT}}"}
+                  {"Local support for Bishopstoke"}
                 </div>
-                <h2 className="text-2xl font-bold tracking-tight text-slate-950 md:text-3xl">{"{{LOCATION1_BOOKING_SECTION_TITLE}}"}</h2>
-                <p className="mt-3 text-base leading-7 text-slate-600">{"{{LOCATION1_BOOKING_SECTION_DESCRIPTION}}"}</p>
+                <h2 className="text-2xl font-bold tracking-tight text-slate-950 md:text-3xl">{"Easy vehicle booking in Bishopstoke"}</h2>
+                <p className="mt-3 text-base leading-7 text-slate-600">{"Hiring a vehicle for Bishopstoke should feel simple. We help match the booking to your route, load size or passenger needs, with practical arrangements for collection or delivery where needed."}</p>
                 <div className="mt-5 flex flex-wrap gap-3 text-sm text-slate-600">
                   <div className="inline-flex items-center gap-2 rounded-full bg-white px-4 py-2 shadow-sm">
                     <PhoneCall className="h-4 w-4 text-[#00B395]" />
-                    {"{{LOCATION1_BOOKING_FEATURE_1}}"}
+                    {"Free delivery and collection available"}
                   </div>
                   <div className="inline-flex items-center gap-2 rounded-full bg-white px-4 py-2 shadow-sm">
                     <Clock3 className="h-4 w-4 text-[#00B395]" />
-                    {"{{LOCATION1_BOOKING_FEATURE_2}}"}
+                    {"Personal and business hire options"}
                   </div>
                 </div>
               </div>
@@ -153,8 +153,8 @@ export default function LocationPage() {
       <section id="trust" className="px-6 py-16">
         <div className="mx-auto max-w-6xl">
           <div className="mb-12 text-center">
-            <h2 className="mb-4 text-4xl font-bold">{"{{LOCATION1_TRUST_SECTION_TITLE}}"}</h2>
-            <p className="text-lg text-muted-foreground">{"{{LOCATION1_TRUST_SECTION_DESCRIPTION}}"}</p>
+            <h2 className="mb-4 text-4xl font-bold">{"Why Bishopstoke customers book with us"}</h2>
+            <p className="text-lg text-muted-foreground">{"We focus on practical service, dependable vehicles and hire options that suit real local jobs."}</p>
           </div>
           <div className="grid gap-8 md:grid-cols-3 md:auto-rows-fr">
             {trustCards.map((item) => (
@@ -173,9 +173,9 @@ export default function LocationPage() {
       <section className="bg-white px-6 py-20 text-slate-950">
         <div className="mx-auto grid max-w-6xl gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
           <div>
-            <p className="mb-4 text-sm font-semibold uppercase tracking-[0.3em] text-[#00B395]">{"{{LOCATION1_FEATURE_SECTION_KICKER}}"}</p>
-            <h2 className="max-w-2xl text-4xl font-bold tracking-tight md:text-5xl">{"{{LOCATION1_FEATURE_SECTION_TITLE}}"}</h2>
-            <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-600">{"{{LOCATION1_FEATURE_SECTION_DESCRIPTION}}"}</p>
+            <p className="mb-4 text-sm font-semibold uppercase tracking-[0.3em] text-[#00B395]">{"Vehicle options"}</p>
+            <h2 className="max-w-2xl text-4xl font-bold tracking-tight md:text-5xl">{"Hire vehicles available for Bishopstoke"}</h2>
+            <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-600">{"A practical vehicle range for Bishopstoke customers who need more than one standard hire option."}</p>
             <div className="mt-8 flex flex-wrap gap-4">
               <Button size="lg" className="bg-[#00B395] text-white hover:bg-[#00997f]" asChild>
                 <a href={phoneHref}>No Hassle Booking {phoneDisplay}</a>
@@ -195,13 +195,13 @@ export default function LocationPage() {
 
       <section className="bg-white px-6 py-20">
         <div className="mx-auto max-w-5xl text-center">
-          <p className="mb-4 text-sm font-semibold uppercase tracking-[0.3em] text-[#00B395]">{"{{LOCATION1_CONTENT_SECTION_KICKER}}"}</p>
-          <h2 className="mx-auto max-w-3xl text-4xl font-bold tracking-tight text-slate-950 md:text-5xl">{"{{LOCATION1_CONTENT_SECTION_TITLE}}"}</h2>
+          <p className="mb-4 text-sm font-semibold uppercase tracking-[0.3em] text-[#00B395]">{"Local vehicle hire"}</p>
+          <h2 className="mx-auto max-w-3xl text-4xl font-bold tracking-tight text-slate-950 md:text-5xl">{"Dependable hire services for Bishopstoke"}</h2>
           <div className="mx-auto mt-8 max-w-3xl space-y-6 text-lg leading-8 text-slate-600">
-            <p>{"{{LOCATION1_CONTENT_SECTION_PARAGRAPH_1}}"}</p>
-            <p>{"{{LOCATION1_CONTENT_SECTION_PARAGRAPH_2}}"}</p>
-            <p>{"{{LOCATION1_CONTENT_SECTION_PARAGRAPH_3}}"}</p>
-            <p>{"{{LOCATION1_CONTENT_SECTION_PARAGRAPH_4}}"}</p>
+            <p>{"Southern Van Hire supports customers in Bishopstoke with self-drive vans, cars, minibuses and trucks for everyday transport needs. Whether you are moving items locally, travelling further across Hampshire or arranging extra business capacity, we focus on practical vehicles and clear service."}</p>
+            <p>{"Bishopstoke works well for vehicle hire because it sits close to Eastleigh while still giving good access to nearby residential areas, local businesses and key onward routes. That makes it a common starting point for home moves, furniture collections, trade work and group travel."}</p>
+            <p>{"Van hire is often the first choice for customers in the area, especially for removals, marketplace collections and jobs that need more space than a car can offer. We also provide cars for day-to-day travel, minibuses for organised trips and trucks for heavier loads."}</p>
+            <p>{"Our aim is to keep things straightforward. With maintained vehicles, flexible hire periods and support for personal and business bookings, we help Bishopstoke customers arrange transport that fits the task without overcomplicating the process."}</p>
           </div>
         </div>
       </section>
@@ -210,9 +210,9 @@ export default function LocationPage() {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(0,179,149,0.14),_transparent_55%)] pointer-events-none" />
         <div className="mx-auto max-w-6xl">
           <div className="mx-auto mb-14 max-w-3xl text-center">
-            <p className="mb-4 text-sm font-semibold uppercase tracking-[0.3em] text-[#00B395]">{"{{LOCATION1_BENEFITS_SECTION_KICKER}}"}</p>
-            <h2 className="text-4xl font-bold tracking-tight text-slate-950 md:text-5xl">{"{{LOCATION1_BENEFITS_SECTION_TITLE}}"}</h2>
-            <p className="mt-5 text-lg leading-8 text-slate-600">{"{{LOCATION1_BENEFITS_SECTION_DESCRIPTION}}"}</p>
+            <p className="mb-4 text-sm font-semibold uppercase tracking-[0.3em] text-[#00B395]">{"Why hire here"}</p>
+            <h2 className="text-4xl font-bold tracking-tight text-slate-950 md:text-5xl">{"Straightforward vehicle hire for Bishopstoke journeys"}</h2>
+            <p className="mt-5 text-lg leading-8 text-slate-600">{"Practical reasons local customers choose us for self-drive vehicle hire in Bishopstoke."}</p>
           </div>
           <div className="grid gap-8 md:grid-cols-3">
             {benefits.map((item) => (
@@ -260,8 +260,8 @@ export default function LocationPage() {
         <div className="mx-auto max-w-5xl">
           <div className="mx-auto max-w-3xl text-center">
             <p className="mb-4 text-sm font-semibold uppercase tracking-[0.3em] text-[#00B395]">{"Nearby Locations"}</p>
-            <h2 className="text-3xl font-bold tracking-tight text-slate-950 md:text-4xl">{"{{LOCATION1_NEARBY_LOCATIONS_SECTION_TITLE}}"}</h2>
-            <p className="mt-4 text-lg leading-8 text-slate-600">{"{{LOCATION1_NEARBY_LOCATIONS_SECTION_INTRO}}"}</p>
+            <h2 className="text-3xl font-bold tracking-tight text-slate-950 md:text-4xl">{"Other areas near Bishopstoke we cover"}</h2>
+            <p className="mt-4 text-lg leading-8 text-slate-600">{"If Bishopstoke is not your exact pickup area, we also cover other nearby Hampshire locations that are convenient for local journeys and wider travel."}</p>
           </div>
           <div className="mt-8 flex flex-wrap justify-center gap-3">
             {locationLinks.map((location) => (
@@ -272,16 +272,16 @@ export default function LocationPage() {
           </div>
           <div className="mt-12 grid gap-6 md:grid-cols-3">
             <div className="rounded-3xl border border-slate-200 bg-slate-50 p-6 shadow-sm">
-              <h3 className="text-2xl font-semibold tracking-tight text-slate-950">{"{{LOCATION1_INFO_CONTENT_BLOCK_1_TITLE}}"}</h3>
-              <p className="mt-3 text-base leading-7 text-slate-600">{"{{LOCATION1_INFO_CONTENT_BLOCK_1_BODY}}"}</p>
+              <h3 className="text-2xl font-semibold tracking-tight text-slate-950">{"Useful for everyday transport"}</h3>
+              <p className="mt-3 text-base leading-7 text-slate-600">{"A suitable hire vehicle can make local moves, collection runs and business jobs around Bishopstoke far more manageable."}</p>
             </div>
             <div className="rounded-3xl border border-slate-200 bg-slate-50 p-6 shadow-sm">
-              <h3 className="text-2xl font-semibold tracking-tight text-slate-950">{"{{LOCATION1_INFO_CONTENT_BLOCK_2_TITLE}}"}</h3>
-              <p className="mt-3 text-base leading-7 text-slate-600">{"{{LOCATION1_INFO_CONTENT_BLOCK_2_BODY}}"}</p>
+              <h3 className="text-2xl font-semibold tracking-tight text-slate-950">{"Vehicle choice that fits"}</h3>
+              <p className="mt-3 text-base leading-7 text-slate-600">{"Cars, vans, minibuses and trucks give Bishopstoke customers flexible options for different journey types and load sizes."}</p>
             </div>
             <div className="rounded-3xl border border-slate-200 bg-slate-50 p-6 shadow-sm">
-              <h3 className="text-2xl font-semibold tracking-tight text-slate-950">{"{{LOCATION1_INFO_CONTENT_BLOCK_3_TITLE}}"}</h3>
-              <p className="mt-3 text-base leading-7 text-slate-600">{"{{LOCATION1_INFO_CONTENT_BLOCK_3_BODY}}"}</p>
+              <h3 className="text-2xl font-semibold tracking-tight text-slate-950">{"Designed around real schedules"}</h3>
+              <p className="mt-3 text-base leading-7 text-slate-600">{"Flexible booking and practical support help you organise hire around your own timings rather than forcing a rigid plan."}</p>
             </div>
           </div>
         </div>
@@ -291,14 +291,14 @@ export default function LocationPage() {
         <div className="mx-auto max-w-5xl">
           <div className="mx-auto max-w-3xl text-center">
             <p className="mb-4 text-sm font-semibold uppercase tracking-[0.3em] text-[#00B395]">{"Local Guide"}</p>
-            <h2 className="text-4xl font-bold tracking-tight text-slate-950 md:text-5xl">{"{{LOCATION1_LOCAL_GUIDE_SECTION_TITLE}}"}</h2>
-            <p className="mt-5 text-lg leading-8 text-slate-600">{"{{LOCATION1_LOCAL_GUIDE_SECTION_DESCRIPTION}}"}</p>
+            <h2 className="text-4xl font-bold tracking-tight text-slate-950 md:text-5xl">{"Driving in Hamble-le-Rice"}</h2>
+            <p className="mt-5 text-lg leading-8 text-slate-600">{"Useful local driving notes for hiring a vehicle in and around Hamble-le-Rice."}</p>
           </div>
           <div className="mx-auto mt-12 max-w-4xl space-y-6 text-left">
-            <p className="text-base leading-8 text-slate-600">{"{{LOCATION1_LOCAL_GUIDE_PARAGRAPH_1}}"}</p>
-            <p className="text-base leading-8 text-slate-600">{"{{LOCATION1_LOCAL_GUIDE_PARAGRAPH_2}}"}</p>
-            <p className="text-base leading-8 text-slate-600">{"{{LOCATION1_LOCAL_GUIDE_PARAGRAPH_3}}"}</p>
-            <p className="text-base leading-8 text-slate-600">{"{{LOCATION1_LOCAL_GUIDE_PARAGRAPH_4}}"}</p>
+            <p className="text-base leading-8 text-slate-600">{"Hamble-le-Rice is a practical place to start a hire when you need self-drive transport for marina access, local moves or runs back toward Eastleigh and Southampton. Roads in the village are narrower and more residential in places, so it helps to allow a little extra time when collecting, loading and heading out."}</p>
+            <p className="text-base leading-8 text-slate-600">{"Beaulieu Road, Baron Road and Coach Road are useful local references when planning pickup and delivery access around Hamble-le-Rice. If you are hiring a larger van or truck, it is worth checking turning space, parking room and the easiest direction of approach before setting off, especially around busier residential stretches."}</p>
+            <p className="text-base leading-8 text-slate-600">{"For many customers, the most common reason to hire in Hamble-le-Rice is straightforward transport that avoids multiple car trips. Whether you are moving boxed items, collecting furniture or taking equipment to another part of Hampshire, choosing the right vehicle size early can make loading simpler and keep your day running to schedule."}</p>
+            <p className="text-base leading-8 text-slate-600">{"If your route starts within Hamble-le-Rice, plan your first stop before leaving the village, particularly if you will be carrying a full load or travelling at peak times. A little preparation on parking, reversing space and unloading access can make a big difference, especially when using a longer wheelbase van or anything larger than a standard car."}</p>
           </div>
         </div>
       </section>
@@ -306,9 +306,9 @@ export default function LocationPage() {
       <section className="bg-white px-6 py-20">
         <div className="mx-auto max-w-4xl">
           <div className="mb-12 text-center">
-            <p className="mb-4 text-sm font-semibold uppercase tracking-[0.3em] text-[#00B395]">{"{{LOCATION1_FAQ_SECTION_KICKER}}"}</p>
-            <h2 className="text-4xl font-bold tracking-tight text-slate-950 md:text-5xl">{"{{LOCATION1_FAQ_SECTION_TITLE}}"}</h2>
-            <p className="mt-4 text-lg leading-8 text-slate-600">{"{{LOCATION1_FAQ_SECTION_DESCRIPTION}}"}</p>
+            <p className="mb-4 text-sm font-semibold uppercase tracking-[0.3em] text-[#00B395]">{"Bishopstoke FAQs"}</p>
+            <h2 className="text-4xl font-bold tracking-tight text-slate-950 md:text-5xl">{"Common questions about Bishopstoke hire"}</h2>
+            <p className="mt-4 text-lg leading-8 text-slate-600">{"Useful answers for customers arranging vehicle hire in and around Bishopstoke."}</p>
           </div>
           <div className="rounded-3xl border border-slate-200 bg-slate-50 px-6 shadow-sm">
             {faqs.map((item, index) => (
@@ -326,8 +326,8 @@ export default function LocationPage() {
 
       <section className="bg-[#00B395] px-6 py-16 text-center text-white">
         <div className="mx-auto max-w-2xl">
-          <h2 className="mb-4 text-4xl font-bold">{"{{LOCATION1_CTA_TITLE}}"}</h2>
-          <p className="mb-8 text-lg text-white/85">{"{{LOCATION1_CTA_DESCRIPTION}}"}</p>
+          <h2 className="mb-4 text-4xl font-bold">{"Need vehicle hire in Bishopstoke?"}</h2>
+          <p className="mb-8 text-lg text-white/85">{"Speak to Southern Van Hire to arrange a practical vehicle for Bishopstoke and the surrounding area."}</p>
           <Button size="lg" className="bg-white text-[#00B395] hover:bg-gray-100" asChild>
             <a href={phoneHref}>Book Now</a>
           </Button>

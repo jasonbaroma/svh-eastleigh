@@ -1,4 +1,4 @@
-﻿export const companyName = "{{COMPANY_NAME}}";
-export const companyTagline = "{{COMPANY_TAGLINE}}";
-export const mainLocationName = "{{MAIN_LOCATION_NAME}}";
-export const siteUrl = "{{SITE_URL}}";
+﻿export const companyName = "Southern Van Hire";
+export const companyTagline = "Practical vehicle hire made simple";
+export const mainLocationName = "Eastleigh";
+export const siteUrl = "https://svh-eastleigh.co.uk";

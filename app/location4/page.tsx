@@ -20,26 +20,26 @@ import {
 } from "lucide-react";
 
 export default function LocationPage() {
-  const locationLinks = buildLocationLinks("{{LOCATION_4_NAME}}");
-  const heroImage = { src: "/images/location4-image1.jpeg", alt: "{{LOCATION4_IMAGE_1_ALT}}" };
-  const supportImage = { src: "/images/location4-image2.jpeg", alt: "{{LOCATION4_IMAGE_2_ALT}}" };
+  const locationLinks = buildLocationLinks("Hedge End");
+  const heroImage = { src: "/images/location4-image1.jpeg", alt: "White rental van driving on a main road near retail and business park areas in Hedge End" };
+  const supportImage = { src: "/images/location4-image2.jpeg", alt: "Small business user unloading items from a hire van in a commercial area in Hedge End" };
   const faqs = [
-    { question: "{{LOCATION4_FAQ_1_QUESTION}}", answer: "{{LOCATION4_FAQ_1_ANSWER}}" },
-    { question: "{{LOCATION4_FAQ_2_QUESTION}}", answer: "{{LOCATION4_FAQ_2_ANSWER}}" },
-    { question: "{{LOCATION4_FAQ_3_QUESTION}}", answer: "{{LOCATION4_FAQ_3_ANSWER}}" },
-    { question: "{{LOCATION4_FAQ_4_QUESTION}}", answer: "{{LOCATION4_FAQ_4_ANSWER}}" },
-    { question: "{{LOCATION4_FAQ_5_QUESTION}}", answer: "{{LOCATION4_FAQ_5_ANSWER}}" },
+    { question: "What kinds of vehicles can I hire in Botley?", answer: "Yes, Botley customers can book a range of vehicle types including cars, vans, minibuses and trucks, subject to availability." },
+    { question: "Can I hire for just a short period in Botley?", answer: "Many hires can be arranged for a single day, while longer rentals are also available if you need transport for more time." },
+    { question: "Is Botley vehicle hire suitable for business use?", answer: "Yes, business customers in Botley often hire vehicles for deliveries, temporary cover, project work and added fleet support." },
+    { question: "Do you offer delivery and collection around Botley?", answer: "In many cases, yes. Delivery and collection can help make the process easier depending on the booking and vehicle type." },
+    { question: "Can I book a larger vehicle for heavier jobs in Botley?", answer: "Larger loads, moving jobs, event equipment and commercial transport often call for bigger vehicles, and we can help you choose a suitable option." },
   ];
   const trustCards = [
-    { title: "{{LOCATION4_TRUST_CARD_1_TITLE}}", description: "{{LOCATION4_TRUST_CARD_1_DESCRIPTION}}", icon: ShieldCheck },
-    { title: "{{LOCATION4_TRUST_CARD_2_TITLE}}", description: "{{LOCATION4_TRUST_CARD_2_DESCRIPTION}}", icon: Star },
-    { title: "{{LOCATION4_TRUST_CARD_3_TITLE}}", description: "{{LOCATION4_TRUST_CARD_3_DESCRIPTION}}", icon: Users },
+    { title: "Broad rental choice", description: "Botley customers can access a wide fleet built around practical transport needs rather than one-size-fits-all hire.", icon: ShieldCheck },
+    { title: "Ready for the road", description: "Vehicles are maintained and prepared to give dependable support for local and longer-distance travel.", icon: Star },
+    { title: "Support that stays practical", description: "Our service is designed to be helpful, flexible and easy to arrange for home and business use alike.", icon: Users },
   ];
   const featureStats = [
-    { value: "Car Hire", label: "{{LOCATION4_FEATURE_CARD_1_DESCRIPTION}}" },
-    { value: "Van Hire", label: "{{LOCATION4_FEATURE_CARD_2_DESCRIPTION}}" },
-    { value: "Minibus Hire", label: "{{LOCATION4_FEATURE_CARD_3_DESCRIPTION}}" },
-    { value: "Truck Hire", label: "{{LOCATION4_FEATURE_CARD_4_DESCRIPTION}}" },
+    { value: "Car Hire", label: "Van hire for moves, collections, trades and everyday transport jobs." },
+    { value: "Van Hire", label: "Car rental for local journeys, business travel and temporary replacement use." },
+    { value: "Minibus Hire", label: "Minibus hire for groups heading to events, outings and organised travel." },
+    { value: "Truck Hire", label: "Truck hire for larger payloads, site work and heavier commercial tasks." },
   ];
   const vehicleCards = [
     { src: "/images/smallvan1.jpg", alt: "Small van hire vehicle", title: "Small Vans" },
@@ -52,9 +52,9 @@ export default function LocationPage() {
     { src: "/images/7.5tonnecurtainsidehire.jpg", alt: "7.5 tonne curtainside truck hire vehicle", title: "Truck Hire" },
   ];
   const benefits = [
-    { icon: BadgePoundSterling, title: "{{LOCATION4_BENEFIT_1_TITLE}}", description: "{{LOCATION4_BENEFIT_1_DESCRIPTION}}", detail: "{{LOCATION4_BENEFIT_1_DETAIL}}" },
-    { icon: Clock3, title: "{{LOCATION4_BENEFIT_2_TITLE}}", description: "{{LOCATION4_BENEFIT_2_DESCRIPTION}}", detail: "{{LOCATION4_BENEFIT_2_DETAIL}}" },
-    { icon: CheckCircle2, title: "{{LOCATION4_BENEFIT_3_TITLE}}", description: "{{LOCATION4_BENEFIT_3_DESCRIPTION}}", detail: "{{LOCATION4_BENEFIT_3_DETAIL}}" },
+    { icon: BadgePoundSterling, title: "More suitable vehicle choice", description: "Botley customers can choose from a wide range of vehicle types for domestic, commercial and group travel needs.", detail: "That means you can book something suitable for the route and the job rather than settling for whatever is closest in size." },
+    { icon: Clock3, title: "Hire length to match your plans", description: "Flexible rental periods help if you need transport for a day, a weekend, a full week or a longer booking.", detail: "This is useful for one-off moves, event planning, temporary vehicle cover and ongoing business work around Botley." },
+    { icon: CheckCircle2, title: "A more convenient rental process", description: "Practical delivery and collection options can save time and reduce the extra travel involved in arranging a rental.", detail: "It is especially helpful when you are loading from home, coordinating staff or working to a tight schedule." },
   ];
 
   return (
@@ -103,8 +103,8 @@ export default function LocationPage() {
           <div className="relative z-10 grid gap-12 lg:grid-cols-[1fr_420px] lg:items-center">
             <div className="max-w-3xl">
               <div className="flex flex-col gap-6">
-                <h1 className="text-5xl font-bold tracking-tight">{"{{LOCATION4_HERO_TITLE}}"}</h1>
-                <p className="text-xl text-white">{"{{LOCATION4_HERO_SUBTITLE}}"}</p>
+                <h1 className="text-5xl font-bold tracking-tight">{"Flexible Vehicle Hire in Hedge End"}</h1>
+                <p className="text-xl text-white">{"Self-drive cars, vans, minibuses and trucks for local moves, business work, deliveries and planned trips around South Hampshire."}</p>
                 <Button size="lg" className="w-fit bg-[#00B395] text-white hover:bg-[#00997f]" asChild>
                   <a href={phoneHref}>Book Now</a>
                 </Button>
@@ -127,18 +127,18 @@ export default function LocationPage() {
               <div className="max-w-2xl">
                 <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-[#00B395]/25 bg-white px-3 py-1 text-sm font-medium text-[#00B395]">
                   <PhoneCall className="h-4 w-4" />
-                  {"{{LOCATION4_BOOKING_BADGE_TEXT}}"}
+                  {"Simple booking, local support"}
                 </div>
-                <h2 className="text-2xl font-bold tracking-tight text-slate-950 md:text-3xl">{"{{LOCATION4_BOOKING_SECTION_TITLE}}"}</h2>
-                <p className="mt-3 text-base leading-7 text-slate-600">{"{{LOCATION4_BOOKING_SECTION_DESCRIPTION}}"}</p>
+                <h2 className="text-2xl font-bold tracking-tight text-slate-950 md:text-3xl">{"Easy vehicle booking for Botley"}</h2>
+                <p className="mt-3 text-base leading-7 text-slate-600">{"From short local hires to longer bookings, we help Botley customers arrange a suitable vehicle without unnecessary delays. Just tell us what you need and we will guide you through the options."}</p>
                 <div className="mt-5 flex flex-wrap gap-3 text-sm text-slate-600">
                   <div className="inline-flex items-center gap-2 rounded-full bg-white px-4 py-2 shadow-sm">
                     <PhoneCall className="h-4 w-4 text-[#00B395]" />
-                    {"{{LOCATION4_BOOKING_FEATURE_1}}"}
+                    {"Well-maintained rental fleet"}
                   </div>
                   <div className="inline-flex items-center gap-2 rounded-full bg-white px-4 py-2 shadow-sm">
                     <Clock3 className="h-4 w-4 text-[#00B395]" />
-                    {"{{LOCATION4_BOOKING_FEATURE_2}}"}
+                    {"Flexible self-drive hire"}
                   </div>
                 </div>
               </div>
@@ -153,8 +153,8 @@ export default function LocationPage() {
       <section id="trust" className="px-6 py-16">
         <div className="mx-auto max-w-6xl">
           <div className="mb-12 text-center">
-            <h2 className="mb-4 text-4xl font-bold">{"{{LOCATION4_TRUST_SECTION_TITLE}}"}</h2>
-            <p className="text-lg text-muted-foreground">{"{{LOCATION4_TRUST_SECTION_DESCRIPTION}}"}</p>
+            <h2 className="mb-4 text-4xl font-bold">{"A dependable hire service for Botley"}</h2>
+            <p className="text-lg text-muted-foreground">{"In Botley, we focus on sensible vehicle choice, reliable preparation and straightforward customer support from booking through to return."}</p>
           </div>
           <div className="grid gap-8 md:grid-cols-3 md:auto-rows-fr">
             {trustCards.map((item) => (
@@ -173,9 +173,9 @@ export default function LocationPage() {
       <section className="bg-white px-6 py-20 text-slate-950">
         <div className="mx-auto grid max-w-6xl gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
           <div>
-            <p className="mb-4 text-sm font-semibold uppercase tracking-[0.3em] text-[#00B395]">{"{{LOCATION4_FEATURE_SECTION_KICKER}}"}</p>
-            <h2 className="max-w-2xl text-4xl font-bold tracking-tight md:text-5xl">{"{{LOCATION4_FEATURE_SECTION_TITLE}}"}</h2>
-            <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-600">{"{{LOCATION4_FEATURE_SECTION_DESCRIPTION}}"}</p>
+            <p className="mb-4 text-sm font-semibold uppercase tracking-[0.3em] text-[#00B395]">{"Vehicle options"}</p>
+            <h2 className="max-w-2xl text-4xl font-bold tracking-tight md:text-5xl">{"Hire vehicles available in Botley"}</h2>
+            <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-600">{"Our Botley hire range covers everyday transport through to larger commercial vehicle needs, all with a practical self-drive approach."}</p>
             <div className="mt-8 flex flex-wrap gap-4">
               <Button size="lg" className="bg-[#00B395] text-white hover:bg-[#00997f]" asChild>
                 <a href={phoneHref}>No Hassle Booking {phoneDisplay}</a>
@@ -195,13 +195,13 @@ export default function LocationPage() {
 
       <section className="bg-white px-6 py-20">
         <div className="mx-auto max-w-5xl text-center">
-          <p className="mb-4 text-sm font-semibold uppercase tracking-[0.3em] text-[#00B395]">{"{{LOCATION4_CONTENT_SECTION_KICKER}}"}</p>
-          <h2 className="mx-auto max-w-3xl text-4xl font-bold tracking-tight text-slate-950 md:text-5xl">{"{{LOCATION4_CONTENT_SECTION_TITLE}}"}</h2>
+          <p className="mb-4 text-sm font-semibold uppercase tracking-[0.3em] text-[#00B395]">{"Reliable local hire"}</p>
+          <h2 className="mx-auto max-w-3xl text-4xl font-bold tracking-tight text-slate-950 md:text-5xl">{"Vehicle rental in Botley made practical"}</h2>
           <div className="mx-auto mt-8 max-w-3xl space-y-6 text-lg leading-8 text-slate-600">
-            <p>{"{{LOCATION4_CONTENT_SECTION_PARAGRAPH_1}}"}</p>
-            <p>{"{{LOCATION4_CONTENT_SECTION_PARAGRAPH_2}}"}</p>
-            <p>{"{{LOCATION4_CONTENT_SECTION_PARAGRAPH_3}}"}</p>
-            <p>{"{{LOCATION4_CONTENT_SECTION_PARAGRAPH_4}}"}</p>
+            <p>{"Southern Van Hire provides practical vehicle hire in Botley for private customers, trades, businesses and group travel. Whether you need a van for moving items, a car for temporary transport, a minibus for a planned trip or a truck for larger loads, we aim to keep everything simple and useful."}</p>
+            <p>{"Botley is well placed between Eastleigh, Hedge End and the M27 corridor, so local customers often need a vehicle that can handle both village access and quicker onward travel. Choosing the right size can make a big difference, especially if you are collecting stock, moving furniture or working across several stops in one day."}</p>
+            <p>{"We focus on maintained vehicles, flexible hire terms and straightforward support. That makes it easier to arrange transport around the time you actually need it, whether that is a one-day job, a weekend booking or a longer rental for business use."}</p>
+            <p>{"Botley customers also benefit from the wider Southern Van Hire service model, including free delivery and collection where available and a broad range of self-drive vehicles. The aim is dependable transport without unnecessary hassle."}</p>
           </div>
         </div>
       </section>
@@ -210,9 +210,9 @@ export default function LocationPage() {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(0,179,149,0.14),_transparent_55%)] pointer-events-none" />
         <div className="mx-auto max-w-6xl">
           <div className="mx-auto mb-14 max-w-3xl text-center">
-            <p className="mb-4 text-sm font-semibold uppercase tracking-[0.3em] text-[#00B395]">{"{{LOCATION4_BENEFITS_SECTION_KICKER}}"}</p>
-            <h2 className="text-4xl font-bold tracking-tight text-slate-950 md:text-5xl">{"{{LOCATION4_BENEFITS_SECTION_TITLE}}"}</h2>
-            <p className="mt-5 text-lg leading-8 text-slate-600">{"{{LOCATION4_BENEFITS_SECTION_DESCRIPTION}}"}</p>
+            <p className="mb-4 text-sm font-semibold uppercase tracking-[0.3em] text-[#00B395]">{"Useful advantages"}</p>
+            <h2 className="text-4xl font-bold tracking-tight text-slate-950 md:text-5xl">{"What makes Botley vehicle hire easier"}</h2>
+            <p className="mt-5 text-lg leading-8 text-slate-600">{"A few solid reasons local customers use Southern Van Hire when they need a reliable self-drive vehicle in Botley."}</p>
           </div>
           <div className="grid gap-8 md:grid-cols-3">
             {benefits.map((item) => (
@@ -254,8 +254,8 @@ export default function LocationPage() {
         <div className="mx-auto max-w-5xl">
           <div className="mx-auto max-w-3xl text-center">
             <p className="mb-4 text-sm font-semibold uppercase tracking-[0.3em] text-[#00B395]">{"Nearby Locations"}</p>
-            <h2 className="text-3xl font-bold tracking-tight text-slate-950 md:text-4xl">{"{{LOCATION4_NEARBY_LOCATIONS_SECTION_TITLE}}"}</h2>
-            <p className="mt-4 text-lg leading-8 text-slate-600">{"{{LOCATION4_NEARBY_LOCATIONS_SECTION_INTRO}}"}</p>
+            <h2 className="text-3xl font-bold tracking-tight text-slate-950 md:text-4xl">{"Nearby vehicle hire areas around Botley"}</h2>
+            <p className="mt-4 text-lg leading-8 text-slate-600">{"We also cover surrounding villages and nearby towns, helping customers book a vehicle from Botley or another practical local area."}</p>
           </div>
           <div className="mt-8 flex flex-wrap justify-center gap-3">
             {locationLinks.map((location) => (
@@ -266,16 +266,16 @@ export default function LocationPage() {
           </div>
           <div className="mt-12 grid gap-6 md:grid-cols-3">
             <div className="rounded-3xl border border-slate-200 bg-slate-50 p-6 shadow-sm">
-              <h3 className="text-2xl font-semibold tracking-tight text-slate-950">{"{{LOCATION4_INFO_CONTENT_BLOCK_1_TITLE}}"}</h3>
-              <p className="mt-3 text-base leading-7 text-slate-600">{"{{LOCATION4_INFO_CONTENT_BLOCK_1_BODY}}"}</p>
+              <h3 className="text-2xl font-semibold tracking-tight text-slate-950">{"Vehicle choice that suits real use"}</h3>
+              <p className="mt-3 text-base leading-7 text-slate-600">{"From compact cars to larger transport vehicles, our fleet gives Botley customers useful options for a wide range of journeys and jobs."}</p>
             </div>
             <div className="rounded-3xl border border-slate-200 bg-slate-50 p-6 shadow-sm">
-              <h3 className="text-2xl font-semibold tracking-tight text-slate-950">{"{{LOCATION4_INFO_CONTENT_BLOCK_2_TITLE}}"}</h3>
-              <p className="mt-3 text-base leading-7 text-slate-600">{"{{LOCATION4_INFO_CONTENT_BLOCK_2_BODY}}"}</p>
+              <h3 className="text-2xl font-semibold tracking-tight text-slate-950">{"Dependable vehicles for everyday hire"}</h3>
+              <p className="mt-3 text-base leading-7 text-slate-600">{"Our rental vehicles are prepared for reliable performance, helping you get on with the day without unnecessary hold-ups."}</p>
             </div>
             <div className="rounded-3xl border border-slate-200 bg-slate-50 p-6 shadow-sm">
-              <h3 className="text-2xl font-semibold tracking-tight text-slate-950">{"{{LOCATION4_INFO_CONTENT_BLOCK_3_TITLE}}"}</h3>
-              <p className="mt-3 text-base leading-7 text-slate-600">{"{{LOCATION4_INFO_CONTENT_BLOCK_3_BODY}}"}</p>
+              <h3 className="text-2xl font-semibold tracking-tight text-slate-950">{"Flexible rental support"}</h3>
+              <p className="mt-3 text-base leading-7 text-slate-600">{"We keep booking flexible so you can arrange a vehicle for short-term use, longer periods or changing business requirements."}</p>
             </div>
           </div>
         </div>
@@ -285,14 +285,14 @@ export default function LocationPage() {
         <div className="mx-auto max-w-5xl">
           <div className="mx-auto max-w-3xl text-center">
             <p className="mb-4 text-sm font-semibold uppercase tracking-[0.3em] text-[#00B395]">{"Local Guide"}</p>
-            <h2 className="text-4xl font-bold tracking-tight text-slate-950 md:text-5xl">{"{{LOCATION4_LOCAL_GUIDE_SECTION_TITLE}}"}</h2>
-            <p className="mt-5 text-lg leading-8 text-slate-600">{"{{LOCATION4_LOCAL_GUIDE_SECTION_DESCRIPTION}}"}</p>
+            <h2 className="text-4xl font-bold tracking-tight text-slate-950 md:text-5xl">{"Driving in and around Hedge End"}</h2>
+            <p className="mt-5 text-lg leading-8 text-slate-600">{"Useful local driving pointers for collecting, loading and travelling from Hedge End with a hire vehicle."}</p>
           </div>
           <div className="mx-auto mt-12 max-w-4xl space-y-6 text-left">
-            <p className="text-base leading-8 text-slate-600">{"{{LOCATION4_LOCAL_GUIDE_PARAGRAPH_1}}"}</p>
-            <p className="text-base leading-8 text-slate-600">{"{{LOCATION4_LOCAL_GUIDE_PARAGRAPH_2}}"}</p>
-            <p className="text-base leading-8 text-slate-600">{"{{LOCATION4_LOCAL_GUIDE_PARAGRAPH_3}}"}</p>
-            <p className="text-base leading-8 text-slate-600">{"{{LOCATION4_LOCAL_GUIDE_PARAGRAPH_4}}"}</p>
+            <p className="text-base leading-8 text-slate-600">{"Hedge End works well for vehicle hire because you can quickly join the wider Eastleigh and Southampton road network without needing to drive through the busiest city-centre streets. That makes it practical for home moves, trade jobs, furniture collection and short business runs where a straightforward start to the journey matters."}</p>
+            <p className="text-base leading-8 text-slate-600">{"If you are planning a longer day on the road, it is worth sorting fuel, screen wash and basic checks before heading out. Around Hedge End there are useful stop-off options close by, including Broad Oak Service Station, which can be handy when you want to get organised before a local run or the trip back at the end of hire."}</p>
+            <p className="text-base leading-8 text-slate-600">{"For drivers spending the day between retail areas, housing estates and business premises, timing can make a real difference. Early collection or an off-peak start is often the easiest way to avoid slower traffic on main local routes, especially if you are using a larger van, minibus or truck and want easier parking and loading."}</p>
+            <p className="text-base leading-8 text-slate-600">{"If your vehicle needs a quick clean before return, there are practical options in the wider area such as West End Service Station Carwash. In general, Hedge End is a convenient base for self-drive hire because it gives you a good balance of local access and onward routes, whether the job keeps you nearby or takes you further across Hampshire."}</p>
           </div>
         </div>
       </section>
@@ -300,9 +300,9 @@ export default function LocationPage() {
       <section className="bg-white px-6 py-20">
         <div className="mx-auto max-w-4xl">
           <div className="mb-12 text-center">
-            <p className="mb-4 text-sm font-semibold uppercase tracking-[0.3em] text-[#00B395]">{"{{LOCATION4_FAQ_SECTION_KICKER}}"}</p>
-            <h2 className="text-4xl font-bold tracking-tight text-slate-950 md:text-5xl">{"{{LOCATION4_FAQ_SECTION_TITLE}}"}</h2>
-            <p className="mt-4 text-lg leading-8 text-slate-600">{"{{LOCATION4_FAQ_SECTION_DESCRIPTION}}"}</p>
+            <p className="mb-4 text-sm font-semibold uppercase tracking-[0.3em] text-[#00B395]">{"Need to know"}</p>
+            <h2 className="text-4xl font-bold tracking-tight text-slate-950 md:text-5xl">{"Botley vehicle hire FAQs"}</h2>
+            <p className="mt-4 text-lg leading-8 text-slate-600">{"Answers to a few common questions about hiring a vehicle in Botley."}</p>
           </div>
           <div className="rounded-3xl border border-slate-200 bg-slate-50 px-6 shadow-sm">
             {faqs.map((item, index) => (
@@ -320,8 +320,8 @@ export default function LocationPage() {
 
       <section className="bg-[#00B395] px-6 py-16 text-center text-white">
         <div className="mx-auto max-w-2xl">
-          <h2 className="mb-4 text-4xl font-bold">{"{{LOCATION4_CTA_TITLE}}"}</h2>
-          <p className="mb-8 text-lg text-white/85">{"{{LOCATION4_CTA_DESCRIPTION}}"}</p>
+          <h2 className="mb-4 text-4xl font-bold">{"Book a Botley hire vehicle with confidence"}</h2>
+          <p className="mb-8 text-lg text-white/85">{"If you need a car, van, minibus or truck in Botley, we can help you arrange a practical hire that suits your route, timing and budget."}</p>
           <Button size="lg" className="bg-white text-[#00B395] hover:bg-gray-100" asChild>
             <a href={phoneHref}>Book Now</a>
           </Button>

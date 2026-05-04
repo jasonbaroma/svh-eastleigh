@@ -20,26 +20,26 @@ import {
 } from "lucide-react";
 
 export default function LocationPage() {
-  const locationLinks = buildLocationLinks("{{LOCATION_2_NAME}}");
-  const heroImage = { src: "/images/location2-image1.jpeg", alt: "{{LOCATION2_IMAGE_1_ALT}}" };
-  const supportImage = { src: "/images/location2-image2.jpeg", alt: "{{LOCATION2_IMAGE_2_ALT}}" };
+  const locationLinks = buildLocationLinks("Bursledon");
+  const heroImage = { src: "/images/location2-image1.jpeg", alt: "White hire van driving along a tidy road near the riverside area in Bursledon" };
+  const supportImage = { src: "/images/location2-image2.jpeg", alt: "Customer and staff member checking a hire van before collection in Bursledon" };
   const faqs = [
-    { question: "{{LOCATION2_FAQ_1_QUESTION}}", answer: "{{LOCATION2_FAQ_1_ANSWER}}" },
-    { question: "{{LOCATION2_FAQ_2_QUESTION}}", answer: "{{LOCATION2_FAQ_2_ANSWER}}" },
-    { question: "{{LOCATION2_FAQ_3_QUESTION}}", answer: "{{LOCATION2_FAQ_3_ANSWER}}" },
-    { question: "{{LOCATION2_FAQ_4_QUESTION}}", answer: "{{LOCATION2_FAQ_4_ANSWER}}" },
-    { question: "{{LOCATION2_FAQ_5_QUESTION}}", answer: "{{LOCATION2_FAQ_5_ANSWER}}" },
+    { question: "Can I book a hire vehicle in Bursledon?", answer: "Yes, we can help arrange vehicle hire for Bursledon customers for both personal and business use, subject to availability. Whether you need a van for a move or a car for temporary transport, we will guide you to the right option." },
+    { question: "Do you provide delivery and collection in Bursledon?", answer: "In many cases, yes. Delivery and collection can often be arranged in Bursledon depending on the type of vehicle and the length of hire, which helps keep booking straightforward." },
+    { question: "What vehicles are available to hire in Bursledon?", answer: "Our available range includes vans, cars, minibuses and trucks. If you are booking from Bursledon, we can talk through passenger space, load length and general suitability before you confirm." },
+    { question: "Can I get a van for a house move in Bursledon?", answer: "Yes, businesses can hire vehicles for deliveries, temporary fleet support, staff travel and site work." },
+    { question: "Do you offer longer vehicle hire periods in Bursledon?", answer: "Think about load size, number of passengers, route type and parking or access at the destination before choosing." },
   ];
   const trustCards = [
-    { title: "{{LOCATION2_TRUST_CARD_1_TITLE}}", description: "{{LOCATION2_TRUST_CARD_1_DESCRIPTION}}", icon: ShieldCheck },
-    { title: "{{LOCATION2_TRUST_CARD_2_TITLE}}", description: "{{LOCATION2_TRUST_CARD_2_DESCRIPTION}}", icon: Star },
-    { title: "{{LOCATION2_TRUST_CARD_3_TITLE}}", description: "{{LOCATION2_TRUST_CARD_3_DESCRIPTION}}", icon: Users },
+    { title: "Maintained for the job", description: "Vehicles are prepared for dependable everyday use, from short local trips to longer bookings.", icon: ShieldCheck },
+    { title: "Convenient local service", description: "Free delivery and collection helps keep hiring simple for homes, businesses and busy schedules.", icon: Star },
+    { title: "Broad vehicle choice", description: "From cars and vans to minibuses and trucks, we help match the vehicle to the journey.", icon: Users },
   ];
   const featureStats = [
-    { value: "Car Hire", label: "{{LOCATION2_FEATURE_CARD_1_DESCRIPTION}}" },
-    { value: "Van Hire", label: "{{LOCATION2_FEATURE_CARD_2_DESCRIPTION}}" },
-    { value: "Minibus Hire", label: "{{LOCATION2_FEATURE_CARD_3_DESCRIPTION}}" },
-    { value: "Truck Hire", label: "{{LOCATION2_FEATURE_CARD_4_DESCRIPTION}}" },
+    { value: "Car Hire", label: "Van hire for removals, deliveries and larger collection jobs from Fair Oak." },
+    { value: "Van Hire", label: "Car hire for routine travel, local appointments and business journeys." },
+    { value: "Minibus Hire", label: "Minibus hire for group days out, planned events and shared travel." },
+    { value: "Truck Hire", label: "Truck hire for heavier transport tasks and commercial load requirements." },
   ];
   const vehicleCards = [
     { src: "/images/smallvan1.jpg", alt: "Small van hire vehicle", title: "Small Vans" },
@@ -52,9 +52,9 @@ export default function LocationPage() {
     { src: "/images/7.5tonnecurtainsidehire.jpg", alt: "7.5 tonne curtainside truck hire vehicle", title: "Truck Hire" },
   ];
   const benefits = [
-    { icon: BadgePoundSterling, title: "{{LOCATION2_BENEFIT_1_TITLE}}", description: "{{LOCATION2_BENEFIT_1_DESCRIPTION}}", detail: "{{LOCATION2_BENEFIT_1_DETAIL}}" },
-    { icon: Clock3, title: "{{LOCATION2_BENEFIT_2_TITLE}}", description: "{{LOCATION2_BENEFIT_2_DESCRIPTION}}", detail: "{{LOCATION2_BENEFIT_2_DETAIL}}" },
-    { icon: CheckCircle2, title: "{{LOCATION2_BENEFIT_3_TITLE}}", description: "{{LOCATION2_BENEFIT_3_DESCRIPTION}}", detail: "{{LOCATION2_BENEFIT_3_DETAIL}}" },
+    { icon: BadgePoundSterling, title: "Convenient for local and regional travel", description: "Fair Oak offers useful access towards Eastleigh, Bishopstoke and the wider Hampshire road network.", detail: "That makes it practical for local errands, removals, business trips and longer journeys across the region." },
+    { icon: Clock3, title: "More suitable vehicle options", description: "A wider vehicle choice helps if your plans involve passengers, bulky loads or mixed journey types.", detail: "Hiring the right vehicle can make a noticeable difference when dealing with village roads, collection points or full-day travel." },
+    { icon: CheckCircle2, title: "Hire periods that work for you", description: "Flexible booking helps when jobs change, projects overrun or travel dates move.", detail: "That is especially useful for house moves, event transport and short-term business cover in and around Fair Oak." },
   ];
 
   return (
@@ -103,8 +103,8 @@ export default function LocationPage() {
           <div className="relative z-10 grid gap-12 lg:grid-cols-[1fr_420px] lg:items-center">
             <div className="max-w-3xl">
               <div className="flex flex-col gap-6">
-                <h1 className="text-5xl font-bold tracking-tight">{"{{LOCATION2_HERO_TITLE}}"}</h1>
-                <p className="text-xl text-white">{"{{LOCATION2_HERO_SUBTITLE}}"}</p>
+                <h1 className="text-5xl font-bold tracking-tight">{"Reliable Vehicle Hire in Bursledon"}</h1>
+                <p className="text-xl text-white">{"Flexible self-drive van, car, minibus and truck hire for Fair Oak with maintained vehicles and service that keeps things simple."}</p>
                 <Button size="lg" className="w-fit bg-[#00B395] text-white hover:bg-[#00997f]" asChild>
                   <a href={phoneHref}>Book Now</a>
                 </Button>
@@ -127,18 +127,18 @@ export default function LocationPage() {
               <div className="max-w-2xl">
                 <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-[#00B395]/25 bg-white px-3 py-1 text-sm font-medium text-[#00B395]">
                   <PhoneCall className="h-4 w-4" />
-                  {"{{LOCATION2_BOOKING_BADGE_TEXT}}"}
+                  {"Straightforward hire for Fair Oak"}
                 </div>
-                <h2 className="text-2xl font-bold tracking-tight text-slate-950 md:text-3xl">{"{{LOCATION2_BOOKING_SECTION_TITLE}}"}</h2>
-                <p className="mt-3 text-base leading-7 text-slate-600">{"{{LOCATION2_BOOKING_SECTION_DESCRIPTION}}"}</p>
+                <h2 className="text-2xl font-bold tracking-tight text-slate-950 md:text-3xl">{"Book the right vehicle for Fair Oak"}</h2>
+                <p className="mt-3 text-base leading-7 text-slate-600">{"We make it easier for Fair Oak customers to book a suitable van, car, minibus or truck without unnecessary back and forth. Just let us know the type of work or journey involved and we will help with a practical hire option."}</p>
                 <div className="mt-5 flex flex-wrap gap-3 text-sm text-slate-600">
                   <div className="inline-flex items-center gap-2 rounded-full bg-white px-4 py-2 shadow-sm">
                     <PhoneCall className="h-4 w-4 text-[#00B395]" />
-                    {"{{LOCATION2_BOOKING_FEATURE_1}}"}
+                    {"Flexible self-drive arrangements"}
                   </div>
                   <div className="inline-flex items-center gap-2 rounded-full bg-white px-4 py-2 shadow-sm">
                     <Clock3 className="h-4 w-4 text-[#00B395]" />
-                    {"{{LOCATION2_BOOKING_FEATURE_2}}"}
+                    {"Maintained vehicles across categories"}
                   </div>
                 </div>
               </div>
@@ -153,8 +153,8 @@ export default function LocationPage() {
       <section id="trust" className="px-6 py-16">
         <div className="mx-auto max-w-6xl">
           <div className="mb-12 text-center">
-            <h2 className="mb-4 text-4xl font-bold">{"{{LOCATION2_TRUST_SECTION_TITLE}}"}</h2>
-            <p className="text-lg text-muted-foreground">{"{{LOCATION2_TRUST_SECTION_DESCRIPTION}}"}</p>
+            <h2 className="mb-4 text-4xl font-bold">{"Straightforward hire with dependable support"}</h2>
+            <p className="text-lg text-muted-foreground">{"We focus on practical service, well-kept vehicles and flexible hire arrangements that work for both private and business customers in Hedge End."}</p>
           </div>
           <div className="grid gap-8 md:grid-cols-3 md:auto-rows-fr">
             {trustCards.map((item) => (
@@ -173,9 +173,9 @@ export default function LocationPage() {
       <section className="bg-white px-6 py-20 text-slate-950">
         <div className="mx-auto grid max-w-6xl gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
           <div>
-            <p className="mb-4 text-sm font-semibold uppercase tracking-[0.3em] text-[#00B395]">{"{{LOCATION2_FEATURE_SECTION_KICKER}}"}</p>
-            <h2 className="max-w-2xl text-4xl font-bold tracking-tight md:text-5xl">{"{{LOCATION2_FEATURE_SECTION_TITLE}}"}</h2>
-            <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-600">{"{{LOCATION2_FEATURE_SECTION_DESCRIPTION}}"}</p>
+            <p className="mb-4 text-sm font-semibold uppercase tracking-[0.3em] text-[#00B395]">{"Available vehicle types"}</p>
+            <h2 className="max-w-2xl text-4xl font-bold tracking-tight md:text-5xl">{"From vans to trucks in Fair Oak"}</h2>
+            <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-600">{"A flexible self-drive range gives Fair Oak customers practical choices for different loads, passenger numbers and trip types."}</p>
             <div className="mt-8 flex flex-wrap gap-4">
               <Button size="lg" className="bg-[#00B395] text-white hover:bg-[#00997f]" asChild>
                 <a href={phoneHref}>No Hassle Booking {phoneDisplay}</a>
@@ -195,13 +195,13 @@ export default function LocationPage() {
 
       <section className="bg-white px-6 py-20">
         <div className="mx-auto max-w-5xl text-center">
-          <p className="mb-4 text-sm font-semibold uppercase tracking-[0.3em] text-[#00B395]">{"{{LOCATION2_CONTENT_SECTION_KICKER}}"}</p>
-          <h2 className="mx-auto max-w-3xl text-4xl font-bold tracking-tight text-slate-950 md:text-5xl">{"{{LOCATION2_CONTENT_SECTION_TITLE}}"}</h2>
+          <p className="mb-4 text-sm font-semibold uppercase tracking-[0.3em] text-[#00B395]">{"Serving Fair Oak"}</p>
+          <h2 className="mx-auto max-w-3xl text-4xl font-bold tracking-tight text-slate-950 md:text-5xl">{"Practical vehicle rental in Fair Oak"}</h2>
           <div className="mx-auto mt-8 max-w-3xl space-y-6 text-lg leading-8 text-slate-600">
-            <p>{"{{LOCATION2_CONTENT_SECTION_PARAGRAPH_1}}"}</p>
-            <p>{"{{LOCATION2_CONTENT_SECTION_PARAGRAPH_2}}"}</p>
-            <p>{"{{LOCATION2_CONTENT_SECTION_PARAGRAPH_3}}"}</p>
-            <p>{"{{LOCATION2_CONTENT_SECTION_PARAGRAPH_4}}"}</p>
+            <p>{"Southern Van Hire provides practical self-drive vehicle hire for customers in Fair Oak, covering everything from local moving jobs to business travel and group transport. We focus on straightforward booking, dependable vehicles and flexible hire periods."}</p>
+            <p>{"Fair Oak is a useful area for vehicle hire because it combines residential demand with easy onward access to Eastleigh, Winchester and other parts of Hampshire. Customers often hire for furniture pickups, home improvement projects, family trips and temporary business needs."}</p>
+            <p>{"Van hire is a common choice in Fair Oak, especially for moving larger items or handling jobs that would be difficult in a standard car. Alongside vans, we also offer cars, minibuses and trucks so customers can choose a more suitable vehicle for the journey ahead."}</p>
+            <p>{"Our service is designed to be practical rather than complicated. With maintained vehicles and support for both personal and business bookings, Fair Oak customers can arrange transport with confidence and get on with the job."}</p>
           </div>
         </div>
       </section>
@@ -210,9 +210,9 @@ export default function LocationPage() {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(0,179,149,0.14),_transparent_55%)] pointer-events-none" />
         <div className="mx-auto max-w-6xl">
           <div className="mx-auto mb-14 max-w-3xl text-center">
-            <p className="mb-4 text-sm font-semibold uppercase tracking-[0.3em] text-[#00B395]">{"{{LOCATION2_BENEFITS_SECTION_KICKER}}"}</p>
-            <h2 className="text-4xl font-bold tracking-tight text-slate-950 md:text-5xl">{"{{LOCATION2_BENEFITS_SECTION_TITLE}}"}</h2>
-            <p className="mt-5 text-lg leading-8 text-slate-600">{"{{LOCATION2_BENEFITS_SECTION_DESCRIPTION}}"}</p>
+            <p className="mb-4 text-sm font-semibold uppercase tracking-[0.3em] text-[#00B395]">{"Fair Oak benefits"}</p>
+            <h2 className="text-4xl font-bold tracking-tight text-slate-950 md:text-5xl">{"Vehicle hire that suits Fair Oak travel"}</h2>
+            <p className="mt-5 text-lg leading-8 text-slate-600">{"Useful advantages for customers arranging self-drive hire in Fair Oak and nearby routes."}</p>
           </div>
           <div className="grid gap-8 md:grid-cols-3">
             {benefits.map((item) => (
@@ -254,8 +254,8 @@ export default function LocationPage() {
         <div className="mx-auto max-w-5xl">
           <div className="mx-auto max-w-3xl text-center">
             <p className="mb-4 text-sm font-semibold uppercase tracking-[0.3em] text-[#00B395]">{"Nearby Locations"}</p>
-            <h2 className="text-3xl font-bold tracking-tight text-slate-950 md:text-4xl">{"{{LOCATION2_NEARBY_LOCATIONS_SECTION_TITLE}}"}</h2>
-            <p className="mt-4 text-lg leading-8 text-slate-600">{"{{LOCATION2_NEARBY_LOCATIONS_SECTION_INTRO}}"}</p>
+            <h2 className="text-3xl font-bold tracking-tight text-slate-950 md:text-4xl">{"More hire coverage near Hedge End"}</h2>
+            <p className="mt-4 text-lg leading-8 text-slate-600">{"If Hedge End is not quite the right pickup area, we also cover other nearby parts of South Hampshire for practical, flexible vehicle hire."}</p>
           </div>
           <div className="mt-8 flex flex-wrap justify-center gap-3">
             {locationLinks.map((location) => (
@@ -266,16 +266,16 @@ export default function LocationPage() {
           </div>
           <div className="mt-12 grid gap-6 md:grid-cols-3">
             <div className="rounded-3xl border border-slate-200 bg-slate-50 p-6 shadow-sm">
-              <h3 className="text-2xl font-semibold tracking-tight text-slate-950">{"{{LOCATION2_INFO_CONTENT_BLOCK_1_TITLE}}"}</h3>
-              <p className="mt-3 text-base leading-7 text-slate-600">{"{{LOCATION2_INFO_CONTENT_BLOCK_1_BODY}}"}</p>
+              <h3 className="text-2xl font-semibold tracking-tight text-slate-950">{"A vehicle for every type of trip"}</h3>
+              <p className="mt-3 text-base leading-7 text-slate-600">{"Choose from practical cars, vans, minibuses and trucks to match the job, whether you need something compact for local driving or more space for heavier loads."}</p>
             </div>
             <div className="rounded-3xl border border-slate-200 bg-slate-50 p-6 shadow-sm">
-              <h3 className="text-2xl font-semibold tracking-tight text-slate-950">{"{{LOCATION2_INFO_CONTENT_BLOCK_2_TITLE}}"}</h3>
-              <p className="mt-3 text-base leading-7 text-slate-600">{"{{LOCATION2_INFO_CONTENT_BLOCK_2_BODY}}"}</p>
+              <h3 className="text-2xl font-semibold tracking-tight text-slate-950">{"Well-kept vehicles you can rely on"}</h3>
+              <p className="mt-3 text-base leading-7 text-slate-600">{"Our hire vehicles are prepared for day-to-day reliability, giving private and business customers a straightforward option without unnecessary complications."}</p>
             </div>
             <div className="rounded-3xl border border-slate-200 bg-slate-50 p-6 shadow-sm">
-              <h3 className="text-2xl font-semibold tracking-tight text-slate-950">{"{{LOCATION2_INFO_CONTENT_BLOCK_3_TITLE}}"}</h3>
-              <p className="mt-3 text-base leading-7 text-slate-600">{"{{LOCATION2_INFO_CONTENT_BLOCK_3_BODY}}"}</p>
+              <h3 className="text-2xl font-semibold tracking-tight text-slate-950">{"Flexible hire that fits around you"}</h3>
+              <p className="mt-3 text-base leading-7 text-slate-600">{"Short hires, longer bookings and business use can all be arranged with clear, practical support so you can get moving with the right vehicle."}</p>
             </div>
           </div>
         </div>
@@ -285,14 +285,14 @@ export default function LocationPage() {
         <div className="mx-auto max-w-5xl">
           <div className="mx-auto max-w-3xl text-center">
             <p className="mb-4 text-sm font-semibold uppercase tracking-[0.3em] text-[#00B395]">{"Local Guide"}</p>
-            <h2 className="text-4xl font-bold tracking-tight text-slate-950 md:text-5xl">{"{{LOCATION2_LOCAL_GUIDE_SECTION_TITLE}}"}</h2>
-            <p className="mt-5 text-lg leading-8 text-slate-600">{"{{LOCATION2_LOCAL_GUIDE_SECTION_DESCRIPTION}}"}</p>
+            <h2 className="text-4xl font-bold tracking-tight text-slate-950 md:text-5xl">{"Driving and hire tips for Bursledon"}</h2>
+            <p className="mt-5 text-lg leading-8 text-slate-600">{"Useful local guidance for collecting, loading and driving a hire vehicle around Bursledon and the surrounding route network."}</p>
           </div>
           <div className="mx-auto mt-12 max-w-4xl space-y-6 text-left">
-            <p className="text-base leading-8 text-slate-600">{"{{LOCATION2_LOCAL_GUIDE_PARAGRAPH_1}}"}</p>
-            <p className="text-base leading-8 text-slate-600">{"{{LOCATION2_LOCAL_GUIDE_PARAGRAPH_2}}"}</p>
-            <p className="text-base leading-8 text-slate-600">{"{{LOCATION2_LOCAL_GUIDE_PARAGRAPH_3}}"}</p>
-            <p className="text-base leading-8 text-slate-600">{"{{LOCATION2_LOCAL_GUIDE_PARAGRAPH_4}}"}</p>
+            <p className="text-base leading-8 text-slate-600">{"Bursledon works well for both local and longer trips because it sits between village roads and bigger route links. If you are starting out near School Road, Station Road or Portsmouth Road, it helps to allow a little extra time for tighter residential stretches, parked cars and busier junctions, especially when collecting furniture, making timed deliveries or moving house."}</p>
+            <p className="text-base leading-8 text-slate-600">{"For straightforward access across the area, Portsmouth Road is one of the more useful corridors, while Botley Road can be a practical link when you are heading out of Bursledon with a larger vehicle. Drivers hiring a van or truck often find it easier to load first, set the sat nav before moving off, and plan a route that avoids unnecessary turns through smaller side roads such as Lands End Road where space can feel more limited."}</p>
+            <p className="text-base leading-8 text-slate-600">{"If your journey starts close to the centre of Bursledon, think about the purpose of the hire before you travel. A short wheelbase van can be simpler for local collections and smaller access points, while a larger van, minibus or truck may suit exhibition kit, business transport or bulk loads better once you are out on the main roads. That small bit of planning can make a big difference to journey time and unloading."}</p>
+            <p className="text-base leading-8 text-slate-600">{"For day hires in Bursledon, it is worth planning your stops in advance rather than relying on last-minute pull-ins. Keep an eye on local parking conditions, choose wider places for reversing and loading, and use the main local routes when possible for an easier drive. If you are travelling beyond Bursledon, a well-planned start through the village roads usually makes the rest of the trip much more straightforward."}</p>
           </div>
         </div>
       </section>
@@ -300,9 +300,9 @@ export default function LocationPage() {
       <section className="bg-white px-6 py-20">
         <div className="mx-auto max-w-4xl">
           <div className="mb-12 text-center">
-            <p className="mb-4 text-sm font-semibold uppercase tracking-[0.3em] text-[#00B395]">{"{{LOCATION2_FAQ_SECTION_KICKER}}"}</p>
-            <h2 className="text-4xl font-bold tracking-tight text-slate-950 md:text-5xl">{"{{LOCATION2_FAQ_SECTION_TITLE}}"}</h2>
-            <p className="mt-4 text-lg leading-8 text-slate-600">{"{{LOCATION2_FAQ_SECTION_DESCRIPTION}}"}</p>
+            <p className="mb-4 text-sm font-semibold uppercase tracking-[0.3em] text-[#00B395]">{"Questions answered"}</p>
+            <h2 className="text-4xl font-bold tracking-tight text-slate-950 md:text-5xl">{"Fair Oak hire FAQs"}</h2>
+            <p className="mt-4 text-lg leading-8 text-slate-600">{"A few practical questions customers often ask before booking vehicle hire in Fair Oak."}</p>
           </div>
           <div className="rounded-3xl border border-slate-200 bg-slate-50 px-6 shadow-sm">
             {faqs.map((item, index) => (
@@ -320,8 +320,8 @@ export default function LocationPage() {
 
       <section className="bg-[#00B395] px-6 py-16 text-center text-white">
         <div className="mx-auto max-w-2xl">
-          <h2 className="mb-4 text-4xl font-bold">{"{{LOCATION2_CTA_TITLE}}"}</h2>
-          <p className="mb-8 text-lg text-white/85">{"{{LOCATION2_CTA_DESCRIPTION}}"}</p>
+          <h2 className="mb-4 text-4xl font-bold">{"Looking for Fair Oak vehicle hire?"}</h2>
+          <p className="mb-8 text-lg text-white/85">{"Arrange a suitable self-drive vehicle for Fair Oak with Southern Van Hire and keep your plans moving."}</p>
           <Button size="lg" className="bg-white text-[#00B395] hover:bg-gray-100" asChild>
             <a href={phoneHref}>Book Now</a>
           </Button>

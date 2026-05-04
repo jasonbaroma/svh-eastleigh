@@ -1,17 +1,17 @@
 import { slugifyLocation } from "@/lib/utils";
 
 export const mainLocationLink = {
-  label: "{{MAIN_LOCATION_NAME}}",
+  label: "Eastleigh",
   href: "/",
 };
 
 const LOCATION_NAMES = [
-  "{{LOCATION_1_NAME}}",
-  "{{LOCATION_2_NAME}}",
-  "{{LOCATION_3_NAME}}",
-  "{{LOCATION_4_NAME}}",
-  "{{LOCATION_5_NAME}}",
-  "{{LOCATION_6_NAME}}",
+  "Hamble-le-Rice",
+  "Bursledon",
+  "Bishopstoke",
+  "Hedge End",
+  "Netley",
+  "Fair Oak",
 ] as const;
 
 export const nearbyLocationLinks = LOCATION_NAMES.map((label) => ({
