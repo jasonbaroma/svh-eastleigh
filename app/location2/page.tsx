@@ -1,5 +1,6 @@
 ﻿"use client";
 
+import type { Metadata } from "next";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import Image from "next/image";
@@ -7,6 +8,7 @@ import Link from "next/link";
 import { mainLocationName } from "@/lib/company";
 import { phoneDisplay, phoneHref } from "@/lib/contact";
 import { buildLocationLinks } from "@/lib/location-links";
+import { slugifyLocation } from "@/lib/utils";
 import {
   BadgePoundSterling,
   CheckCircle2,
@@ -19,27 +21,33 @@ import {
   Users,
 } from "lucide-react";
 
+export const metadata = {
+  alternates: {
+    canonical: `/${slugifyLocation("Fair Oak")}`,
+  },
+} satisfies Metadata;
+
 export default function LocationPage() {
-  const locationLinks = buildLocationLinks("Bursledon");
-  const heroImage = { src: "/images/location2-image1.jpeg", alt: "White hire van driving along a tidy road near the riverside area in Bursledon" };
-  const supportImage = { src: "/images/location2-image2.jpeg", alt: "Customer and staff member checking a hire van before collection in Bursledon" };
+  const locationLinks = buildLocationLinks("Fair Oak");
+  const heroImage = { src: "/images/location2-image1.jpeg", alt: "Rental van on a local road in Fair Oak" };
+  const supportImage = { src: "/images/location2-image2.jpeg", alt: "Vehicle hire view serving Fair Oak and surrounding Hampshire routes" };
   const faqs = [
-    { question: "Can I book a hire vehicle in Bursledon?", answer: "Yes, we can help arrange vehicle hire for Bursledon customers for both personal and business use, subject to availability. Whether you need a van for a move or a car for temporary transport, we will guide you to the right option." },
-    { question: "Do you provide delivery and collection in Bursledon?", answer: "In many cases, yes. Delivery and collection can often be arranged in Bursledon depending on the type of vehicle and the length of hire, which helps keep booking straightforward." },
-    { question: "What vehicles are available to hire in Bursledon?", answer: "Our available range includes vans, cars, minibuses and trucks. If you are booking from Bursledon, we can talk through passenger space, load length and general suitability before you confirm." },
-    { question: "Can I get a van for a house move in Bursledon?", answer: "Yes, businesses can hire vehicles for deliveries, temporary fleet support, staff travel and site work." },
-    { question: "Do you offer longer vehicle hire periods in Bursledon?", answer: "Think about load size, number of passengers, route type and parking or access at the destination before choosing." },
+    { question: "Do you provide vehicle hire for Fair Oak?", answer: "Yes, we can help Fair Oak customers arrange self-drive vehicle hire, including vans, cars, minibuses and trucks depending on the requirement." },
+    { question: "Which vehicles are most useful for Fair Oak home moves?", answer: "Yes, if you need more seats than a car provides, a self-drive minibus can be a practical option for group travel." },
+    { question: "Can Fair Oak businesses book rental vehicles as needed?", answer: "Many can. We offer flexible rental periods depending on the vehicle type and your planned use." },
+    { question: "Is short-term hire available in Fair Oak?", answer: "In many cases, yes. Delivery and collection options can often be arranged to make the booking easier to manage." },
+    { question: "How do I choose between a car, van or larger vehicle?", answer: "We can guide you based on passenger numbers, luggage, load dimensions and the type of route you expect to cover." },
   ];
   const trustCards = [
-    { title: "Maintained for the job", description: "Vehicles are prepared for dependable everyday use, from short local trips to longer bookings.", icon: ShieldCheck },
-    { title: "Convenient local service", description: "Free delivery and collection helps keep hiring simple for homes, businesses and busy schedules.", icon: Star },
-    { title: "Broad vehicle choice", description: "From cars and vans to minibuses and trucks, we help match the vehicle to the journey.", icon: Users },
+    { title: "Helpful, no-fuss service", description: "A straightforward rental service with practical support before, during and after your booking.", icon: ShieldCheck },
+    { title: "Delivery and collection available", description: "Free delivery and collection helps save time when your day is already planned around moving, loading or travel.", icon: Star },
+    { title: "Suitable for personal and business hire", description: "From private hire to regular business use, we can help arrange vehicles for short notice and planned bookings alike.", icon: Users },
   ];
   const featureStats = [
-    { value: "Car Hire", label: "Van hire for removals, deliveries and larger collection jobs from Fair Oak." },
-    { value: "Van Hire", label: "Car hire for routine travel, local appointments and business journeys." },
-    { value: "Minibus Hire", label: "Minibus hire for group days out, planned events and shared travel." },
-    { value: "Truck Hire", label: "Truck hire for heavier transport tasks and commercial load requirements." },
+    { value: "Car Hire", label: "Van hire in Fair Oak for moves, collections, deliveries and day-to-day carrying jobs." },
+    { value: "Van Hire", label: "Car hire for everyday journeys, temporary replacement use and flexible travel." },
+    { value: "Minibus Hire", label: "Minibus options for clubs, family travel and organised outings." },
+    { value: "Truck Hire", label: "Truck hire for larger loads that need more capacity and working space." },
   ];
   const vehicleCards = [
     { src: "/images/smallvan1.jpg", alt: "Small van hire vehicle", title: "Small Vans" },
@@ -52,9 +60,9 @@ export default function LocationPage() {
     { src: "/images/7.5tonnecurtainsidehire.jpg", alt: "7.5 tonne curtainside truck hire vehicle", title: "Truck Hire" },
   ];
   const benefits = [
-    { icon: BadgePoundSterling, title: "Convenient for local and regional travel", description: "Fair Oak offers useful access towards Eastleigh, Bishopstoke and the wider Hampshire road network.", detail: "That makes it practical for local errands, removals, business trips and longer journeys across the region." },
-    { icon: Clock3, title: "More suitable vehicle options", description: "A wider vehicle choice helps if your plans involve passengers, bulky loads or mixed journey types.", detail: "Hiring the right vehicle can make a noticeable difference when dealing with village roads, collection points or full-day travel." },
-    { icon: CheckCircle2, title: "Hire periods that work for you", description: "Flexible booking helps when jobs change, projects overrun or travel dates move.", detail: "That is especially useful for house moves, event transport and short-term business cover in and around Fair Oak." },
+    { icon: BadgePoundSterling, title: "Good links without city-centre hassle", description: "Useful van sizes for Fair Oak home moves, garden projects, retail collection runs and small business work.", detail: "That makes it useful for local moves, business runs and collections that cross several nearby areas in one day." },
+    { icon: Clock3, title: "A practical range of vehicle types", description: "You can choose a vehicle based on load size, passenger needs and trip length rather than making do with whatever is available.", detail: "That helps keep things efficient whether you need a car for temporary use or a van or truck for a larger transport task." },
+    { icon: CheckCircle2, title: "Flexible around real plans", description: "Our booking approach is built around straightforward arrangements and flexible timescales.", detail: "That can be especially helpful for customers coordinating around home access, work schedules or changing collection times." },
   ];
 
   return (
@@ -103,8 +111,8 @@ export default function LocationPage() {
           <div className="relative z-10 grid gap-12 lg:grid-cols-[1fr_420px] lg:items-center">
             <div className="max-w-3xl">
               <div className="flex flex-col gap-6">
-                <h1 className="text-5xl font-bold tracking-tight">{"Reliable Vehicle Hire in Bursledon"}</h1>
-                <p className="text-xl text-white">{"Flexible self-drive van, car, minibus and truck hire for Fair Oak with maintained vehicles and service that keeps things simple."}</p>
+                <h1 className="text-5xl font-bold tracking-tight">{"Flexible vehicle hire in Fair Oak"}</h1>
+                <p className="text-xl text-white">{"Van, car, minibus and truck hire in Fair Oak with flexible booking, maintained vehicles and practical local support."}</p>
                 <Button size="lg" className="w-fit bg-[#00B395] text-white hover:bg-[#00997f]" asChild>
                   <a href={phoneHref}>Book Now</a>
                 </Button>
@@ -127,18 +135,18 @@ export default function LocationPage() {
               <div className="max-w-2xl">
                 <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-[#00B395]/25 bg-white px-3 py-1 text-sm font-medium text-[#00B395]">
                   <PhoneCall className="h-4 w-4" />
-                  {"Straightforward hire for Fair Oak"}
+                  {"Easy booking for Fair Oak"}
                 </div>
-                <h2 className="text-2xl font-bold tracking-tight text-slate-950 md:text-3xl">{"Book the right vehicle for Fair Oak"}</h2>
-                <p className="mt-3 text-base leading-7 text-slate-600">{"We make it easier for Fair Oak customers to book a suitable van, car, minibus or truck without unnecessary back and forth. Just let us know the type of work or journey involved and we will help with a practical hire option."}</p>
+                <h2 className="text-2xl font-bold tracking-tight text-slate-950 md:text-3xl">{"Simple vehicle booking in Fair Oak"}</h2>
+                <p className="mt-3 text-base leading-7 text-slate-600">{"We keep Fair Oak vehicle hire clear and practical, helping you book the right van, car, minibus or truck for the journey with flexible arrangements that suit real schedules."}</p>
                 <div className="mt-5 flex flex-wrap gap-3 text-sm text-slate-600">
                   <div className="inline-flex items-center gap-2 rounded-full bg-white px-4 py-2 shadow-sm">
                     <PhoneCall className="h-4 w-4 text-[#00B395]" />
-                    {"Flexible self-drive arrangements"}
+                    {"Flexible self-drive options"}
                   </div>
                   <div className="inline-flex items-center gap-2 rounded-full bg-white px-4 py-2 shadow-sm">
                     <Clock3 className="h-4 w-4 text-[#00B395]" />
-                    {"Maintained vehicles across categories"}
+                    {"Useful for home and business"}
                   </div>
                 </div>
               </div>
@@ -153,8 +161,8 @@ export default function LocationPage() {
       <section id="trust" className="px-6 py-16">
         <div className="mx-auto max-w-6xl">
           <div className="mb-12 text-center">
-            <h2 className="mb-4 text-4xl font-bold">{"Straightforward hire with dependable support"}</h2>
-            <p className="text-lg text-muted-foreground">{"We focus on practical service, well-kept vehicles and flexible hire arrangements that work for both private and business customers in Hedge End."}</p>
+            <h2 className="mb-4 text-4xl font-bold">{"A reliable choice for Fair Oak hire"}</h2>
+            <p className="text-lg text-muted-foreground">{"Fair Oak customers value a dependable service, maintained vehicles and flexible hire that works for both home and business use."}</p>
           </div>
           <div className="grid gap-8 md:grid-cols-3 md:auto-rows-fr">
             {trustCards.map((item) => (
@@ -174,8 +182,8 @@ export default function LocationPage() {
         <div className="mx-auto grid max-w-6xl gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
           <div>
             <p className="mb-4 text-sm font-semibold uppercase tracking-[0.3em] text-[#00B395]">{"Available vehicle types"}</p>
-            <h2 className="max-w-2xl text-4xl font-bold tracking-tight md:text-5xl">{"From vans to trucks in Fair Oak"}</h2>
-            <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-600">{"A flexible self-drive range gives Fair Oak customers practical choices for different loads, passenger numbers and trip types."}</p>
+            <h2 className="max-w-2xl text-4xl font-bold tracking-tight md:text-5xl">{"Vehicle types available in Fair Oak"}</h2>
+            <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-600">{"Fair Oak customers can hire vans, cars, minibuses and trucks for everyday transport, one-off jobs and ongoing business support."}</p>
             <div className="mt-8 flex flex-wrap gap-4">
               <Button size="lg" className="bg-[#00B395] text-white hover:bg-[#00997f]" asChild>
                 <a href={phoneHref}>No Hassle Booking {phoneDisplay}</a>
@@ -195,13 +203,13 @@ export default function LocationPage() {
 
       <section className="bg-white px-6 py-20">
         <div className="mx-auto max-w-5xl text-center">
-          <p className="mb-4 text-sm font-semibold uppercase tracking-[0.3em] text-[#00B395]">{"Serving Fair Oak"}</p>
-          <h2 className="mx-auto max-w-3xl text-4xl font-bold tracking-tight text-slate-950 md:text-5xl">{"Practical vehicle rental in Fair Oak"}</h2>
+          <p className="mb-4 text-sm font-semibold uppercase tracking-[0.3em] text-[#00B395]">{"Fair Oak hire support"}</p>
+          <h2 className="mx-auto max-w-3xl text-4xl font-bold tracking-tight text-slate-950 md:text-5xl">{"Practical rental vehicles for Fair Oak"}</h2>
           <div className="mx-auto mt-8 max-w-3xl space-y-6 text-lg leading-8 text-slate-600">
-            <p>{"Southern Van Hire provides practical self-drive vehicle hire for customers in Fair Oak, covering everything from local moving jobs to business travel and group transport. We focus on straightforward booking, dependable vehicles and flexible hire periods."}</p>
-            <p>{"Fair Oak is a useful area for vehicle hire because it combines residential demand with easy onward access to Eastleigh, Winchester and other parts of Hampshire. Customers often hire for furniture pickups, home improvement projects, family trips and temporary business needs."}</p>
-            <p>{"Van hire is a common choice in Fair Oak, especially for moving larger items or handling jobs that would be difficult in a standard car. Alongside vans, we also offer cars, minibuses and trucks so customers can choose a more suitable vehicle for the journey ahead."}</p>
-            <p>{"Our service is designed to be practical rather than complicated. With maintained vehicles and support for both personal and business bookings, Fair Oak customers can arrange transport with confidence and get on with the job."}</p>
+            <p>{"Fair Oak is a busy residential area with regular demand for practical vehicle hire, from moving furniture and handling DIY projects to covering extra transport for family and work commitments. Southern Van Hire gives Fair Oak customers access to a broad fleet without making the process complicated."}</p>
+            <p>{"A van is often the first choice for local jobs around Fair Oak, but there are plenty of situations where a car, minibus or truck is the better fit. That might mean a temporary replacement vehicle, group travel for an event or a larger vehicle for more demanding loads."}</p>
+            <p>{"For customers in Fair Oak, that flexibility is especially useful when plans change. You might need a compact van for a local furniture collection one day, then a larger vehicle for a full move, exhibition load or business run the next, without making the process more complicated than it needs to be."}</p>
+            <p>{"We aim to offer Fair Oak customers practical availability, helpful guidance and flexible rental periods rather than overcomplicated options. The result is vehicle hire that feels useful from the moment you book it."}</p>
           </div>
         </div>
       </section>
@@ -210,9 +218,9 @@ export default function LocationPage() {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(0,179,149,0.14),_transparent_55%)] pointer-events-none" />
         <div className="mx-auto max-w-6xl">
           <div className="mx-auto mb-14 max-w-3xl text-center">
-            <p className="mb-4 text-sm font-semibold uppercase tracking-[0.3em] text-[#00B395]">{"Fair Oak benefits"}</p>
-            <h2 className="text-4xl font-bold tracking-tight text-slate-950 md:text-5xl">{"Vehicle hire that suits Fair Oak travel"}</h2>
-            <p className="mt-5 text-lg leading-8 text-slate-600">{"Useful advantages for customers arranging self-drive hire in Fair Oak and nearby routes."}</p>
+            <p className="mb-4 text-sm font-semibold uppercase tracking-[0.3em] text-[#00B395]">{"Benefits for Fair Oak customers"}</p>
+            <h2 className="text-4xl font-bold tracking-tight text-slate-950 md:text-5xl">{"Why hire a vehicle in Fair Oak with us"}</h2>
+            <p className="mt-5 text-lg leading-8 text-slate-600">{"Straightforward vehicle hire for Fair Oak residents, local firms and anyone needing extra transport for a day, a week or longer."}</p>
           </div>
           <div className="grid gap-8 md:grid-cols-3">
             {benefits.map((item) => (
@@ -254,8 +262,8 @@ export default function LocationPage() {
         <div className="mx-auto max-w-5xl">
           <div className="mx-auto max-w-3xl text-center">
             <p className="mb-4 text-sm font-semibold uppercase tracking-[0.3em] text-[#00B395]">{"Nearby Locations"}</p>
-            <h2 className="text-3xl font-bold tracking-tight text-slate-950 md:text-4xl">{"More hire coverage near Hedge End"}</h2>
-            <p className="mt-4 text-lg leading-8 text-slate-600">{"If Hedge End is not quite the right pickup area, we also cover other nearby parts of South Hampshire for practical, flexible vehicle hire."}</p>
+            <h2 className="text-3xl font-bold tracking-tight text-slate-950 md:text-4xl">{"Places served around Fair Oak"}</h2>
+            <p className="mt-4 text-lg leading-8 text-slate-600">{"If you are based in Fair Oak, we also cover surrounding areas that are useful for local moves, business travel, and one-off transport needs. Browse nearby locations around Fair Oak to find the most convenient hire point for your journey."}</p>
           </div>
           <div className="mt-8 flex flex-wrap justify-center gap-3">
             {locationLinks.map((location) => (
@@ -266,16 +274,16 @@ export default function LocationPage() {
           </div>
           <div className="mt-12 grid gap-6 md:grid-cols-3">
             <div className="rounded-3xl border border-slate-200 bg-slate-50 p-6 shadow-sm">
-              <h3 className="text-2xl font-semibold tracking-tight text-slate-950">{"A vehicle for every type of trip"}</h3>
-              <p className="mt-3 text-base leading-7 text-slate-600">{"Choose from practical cars, vans, minibuses and trucks to match the job, whether you need something compact for local driving or more space for heavier loads."}</p>
+              <h3 className="text-2xl font-semibold tracking-tight text-slate-950">{"A vehicle for different kinds of work"}</h3>
+              <p className="mt-3 text-base leading-7 text-slate-600">{"Choose from practical cars, vans, minibuses and trucks for short jobs, planned trips or longer business use."}</p>
             </div>
             <div className="rounded-3xl border border-slate-200 bg-slate-50 p-6 shadow-sm">
-              <h3 className="text-2xl font-semibold tracking-tight text-slate-950">{"Well-kept vehicles you can rely on"}</h3>
-              <p className="mt-3 text-base leading-7 text-slate-600">{"Our hire vehicles are prepared for day-to-day reliability, giving private and business customers a straightforward option without unnecessary complications."}</p>
+              <h3 className="text-2xl font-semibold tracking-tight text-slate-950">{"Maintained vehicles you can rely on"}</h3>
+              <p className="mt-3 text-base leading-7 text-slate-600">{"Our hire vehicles are prepared to stay dependable and straightforward to use, whether you are moving goods or carrying passengers."}</p>
             </div>
             <div className="rounded-3xl border border-slate-200 bg-slate-50 p-6 shadow-sm">
-              <h3 className="text-2xl font-semibold tracking-tight text-slate-950">{"Flexible hire that fits around you"}</h3>
-              <p className="mt-3 text-base leading-7 text-slate-600">{"Short hires, longer bookings and business use can all be arranged with clear, practical support so you can get moving with the right vehicle."}</p>
+              <h3 className="text-2xl font-semibold tracking-tight text-slate-950">{"Flexible hire that fits your plans"}</h3>
+              <p className="mt-3 text-base leading-7 text-slate-600">{"We keep booking flexible so you can arrange a rental vehicle for a day, a week or a longer period when needed."}</p>
             </div>
           </div>
         </div>
@@ -285,14 +293,14 @@ export default function LocationPage() {
         <div className="mx-auto max-w-5xl">
           <div className="mx-auto max-w-3xl text-center">
             <p className="mb-4 text-sm font-semibold uppercase tracking-[0.3em] text-[#00B395]">{"Local Guide"}</p>
-            <h2 className="text-4xl font-bold tracking-tight text-slate-950 md:text-5xl">{"Driving and hire tips for Bursledon"}</h2>
-            <p className="mt-5 text-lg leading-8 text-slate-600">{"Useful local guidance for collecting, loading and driving a hire vehicle around Bursledon and the surrounding route network."}</p>
+            <h2 className="text-4xl font-bold tracking-tight text-slate-950 md:text-5xl">{"Driving and hire guidance for Fair Oak"}</h2>
+            <p className="mt-5 text-lg leading-8 text-slate-600">{"Useful local route notes for collecting, loading and using a hire vehicle in and around Fair Oak."}</p>
           </div>
           <div className="mx-auto mt-12 max-w-4xl space-y-6 text-left">
-            <p className="text-base leading-8 text-slate-600">{"Bursledon works well for both local and longer trips because it sits between village roads and bigger route links. If you are starting out near School Road, Station Road or Portsmouth Road, it helps to allow a little extra time for tighter residential stretches, parked cars and busier junctions, especially when collecting furniture, making timed deliveries or moving house."}</p>
-            <p className="text-base leading-8 text-slate-600">{"For straightforward access across the area, Portsmouth Road is one of the more useful corridors, while Botley Road can be a practical link when you are heading out of Bursledon with a larger vehicle. Drivers hiring a van or truck often find it easier to load first, set the sat nav before moving off, and plan a route that avoids unnecessary turns through smaller side roads such as Lands End Road where space can feel more limited."}</p>
-            <p className="text-base leading-8 text-slate-600">{"If your journey starts close to the centre of Bursledon, think about the purpose of the hire before you travel. A short wheelbase van can be simpler for local collections and smaller access points, while a larger van, minibus or truck may suit exhibition kit, business transport or bulk loads better once you are out on the main roads. That small bit of planning can make a big difference to journey time and unloading."}</p>
-            <p className="text-base leading-8 text-slate-600">{"For day hires in Bursledon, it is worth planning your stops in advance rather than relying on last-minute pull-ins. Keep an eye on local parking conditions, choose wider places for reversing and loading, and use the main local routes when possible for an easier drive. If you are travelling beyond Bursledon, a well-planned start through the village roads usually makes the rest of the trip much more straightforward."}</p>
+            <p className="text-base leading-8 text-slate-600">{"Fair Oak works well for local vehicle hire when you need straightforward access into Eastleigh and the wider Hampshire area. Summerlands Road and nearby residential streets are often easier to manage with a smaller van or car, while larger vehicles benefit from planning your loading point before setting off."}</p>
+            <p className="text-base leading-8 text-slate-600">{"Botley Road is one of the more practical routes for getting in and out of Fair Oak, especially if you are heading toward neighbouring towns or linking into wider routes across the borough. If you are collecting furniture, moving household items or making trade calls, it helps to time journeys outside the busier school-run periods."}</p>
+            <p className="text-base leading-8 text-slate-600">{"For jobs around the village, roads such as Durley Road and Fair Oak Road can be useful depending on which side of Fair Oak you need to reach first. When hiring a van, truck or minibus, checking turning space, parking room and any tighter residential sections before arrival can save time and hassle."}</p>
+            <p className="text-base leading-8 text-slate-600">{"Many Fair Oak hires are for home moves, bulky purchases, event transport and short business runs, so choosing the right size vehicle matters. If your journey starts locally but continues farther afield, it is usually worth planning your fuel stop, loading order and main route before leaving so the day runs more smoothly."}</p>
           </div>
         </div>
       </section>
@@ -300,9 +308,9 @@ export default function LocationPage() {
       <section className="bg-white px-6 py-20">
         <div className="mx-auto max-w-4xl">
           <div className="mb-12 text-center">
-            <p className="mb-4 text-sm font-semibold uppercase tracking-[0.3em] text-[#00B395]">{"Questions answered"}</p>
-            <h2 className="text-4xl font-bold tracking-tight text-slate-950 md:text-5xl">{"Fair Oak hire FAQs"}</h2>
-            <p className="mt-4 text-lg leading-8 text-slate-600">{"A few practical questions customers often ask before booking vehicle hire in Fair Oak."}</p>
+            <p className="mb-4 text-sm font-semibold uppercase tracking-[0.3em] text-[#00B395]">{"Fair Oak hire questions"}</p>
+            <h2 className="text-4xl font-bold tracking-tight text-slate-950 md:text-5xl">{"Fair Oak vehicle hire FAQs"}</h2>
+            <p className="mt-4 text-lg leading-8 text-slate-600">{"Helpful answers for customers comparing vehicle hire options in Fair Oak."}</p>
           </div>
           <div className="rounded-3xl border border-slate-200 bg-slate-50 px-6 shadow-sm">
             {faqs.map((item, index) => (
@@ -320,8 +328,8 @@ export default function LocationPage() {
 
       <section className="bg-[#00B395] px-6 py-16 text-center text-white">
         <div className="mx-auto max-w-2xl">
-          <h2 className="mb-4 text-4xl font-bold">{"Looking for Fair Oak vehicle hire?"}</h2>
-          <p className="mb-8 text-lg text-white/85">{"Arrange a suitable self-drive vehicle for Fair Oak with Southern Van Hire and keep your plans moving."}</p>
+          <h2 className="mb-4 text-4xl font-bold">{"Arrange Fair Oak vehicle hire"}</h2>
+          <p className="mb-8 text-lg text-white/85">{"Speak to Southern Van Hire about a suitable vehicle for your Fair Oak move, delivery run, family trip or business booking."}</p>
           <Button size="lg" className="bg-white text-[#00B395] hover:bg-gray-100" asChild>
             <a href={phoneHref}>Book Now</a>
           </Button>

@@ -6,7 +6,7 @@ import './globals.css'
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: 'Van, Car, Minibus and Truck Hire in Eastleigh | Southern Van Hire',
-  description: 'Southern Van Hire Eastleigh offers flexible van, car, minibus and truck hire with maintained vehicles, practical support and delivery options.',
+  description: 'Southern Van Hire offers flexible van, car, minibus and truck hire in Eastleigh with maintained vehicles, practical support and delivery options.',
   generator: 'v0.app',
   alternates: {
     canonical: '/',
@@ -44,4 +44,3 @@ export default function RootLayout({
     </html>
   )
 }
-

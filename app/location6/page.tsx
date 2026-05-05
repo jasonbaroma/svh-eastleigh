@@ -1,5 +1,6 @@
 ﻿"use client";
 
+import type { Metadata } from "next";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import Image from "next/image";
@@ -7,6 +8,7 @@ import Link from "next/link";
 import { mainLocationName } from "@/lib/company";
 import { phoneDisplay, phoneHref } from "@/lib/contact";
 import { buildLocationLinks } from "@/lib/location-links";
+import { slugifyLocation } from "@/lib/utils";
 import {
   BadgePoundSterling,
   CheckCircle2,
@@ -19,27 +21,33 @@ import {
   Users,
 } from "lucide-react";
 
+export const metadata = {
+  alternates: {
+    canonical: `/${slugifyLocation("Botley")}`,
+  },
+} satisfies Metadata;
+
 export default function LocationPage() {
-  const locationLinks = buildLocationLinks("Fair Oak");
-  const heroImage = { src: "/images/location6-image1.jpeg", alt: "White hire van driving on a quiet green road near Fair Oak" };
-  const supportImage = { src: "/images/location6-image2.jpeg", alt: "Customer loading household items into a clean rental van near a home in Fair Oak" };
+  const locationLinks = buildLocationLinks("Botley");
+  const heroImage = { src: "/images/location6-image1.jpeg", alt: "Rental van on route near Botley village and surrounding Hampshire roads" };
+  const supportImage = { src: "/images/location6-image2.jpeg", alt: "Hire vehicle travelling through Botley area towards main Hampshire road links" };
   const faqs = [
-    { question: "Is delivery available in Fair Oak?", answer: "Yes, we can often arrange vehicle delivery and collection in Fair Oak and surrounding areas, depending on the booking." },
-    { question: "What vehicles can I hire in Fair Oak?", answer: "We offer vans, cars, minibuses and trucks, subject to availability and the type of hire you need." },
-    { question: "Can businesses hire vehicles in Fair Oak?", answer: "Yes, we support both personal and business bookings, including moving jobs, deliveries, events and ongoing transport needs." },
-    { question: "Can I book a vehicle quickly?", answer: "Many hires can be arranged at short notice, although availability will depend on the vehicle category and timing." },
-    { question: "Do you offer longer rentals in Fair Oak?", answer: "If you need a vehicle for an extended period, we can discuss longer hire options based on your requirements." },
+    { question: "What vehicles can I hire in Botley?", answer: "Yes, we offer van, car, minibus and truck hire for Botley customers." },
+    { question: "Can I hire a vehicle in Botley for a home move or clear-out?", answer: "Yes, many customers hire for moves, furniture pickup, tip runs and general household transport." },
+    { question: "Is longer-distance travel possible from Botley?", answer: "Often, yes. It depends on availability, route plans and the type of vehicle requested." },
+    { question: "Do you provide business vehicle hire in Botley?", answer: "Yes, we support local businesses that need flexible transport for deliveries, staff movement or temporary fleet cover." },
+    { question: "Can I arrange a vehicle for more than one day in Botley?", answer: "It is best to ask about your plans when booking so the most suitable vehicle and hire terms can be confirmed." },
   ];
   const trustCards = [
-    { title: "Reliable vehicles", description: "A dependable fleet gives customers confidence for local driving, longer journeys and day-to-day business use.", icon: ShieldCheck },
-    { title: "Straightforward to arrange", description: "We keep the booking process clear and practical, helping you get the vehicle you need without unnecessary hassle.", icon: Star },
-    { title: "Support that fits around you", description: "Flexible service, including delivery and collection where possible, helps make hiring easier around Fair Oak.", icon: Users },
+    { title: "Fleet built for real use", description: "Vehicles available for practical day-to-day use, from small local jobs to heavier transport needs.", icon: ShieldCheck },
+    { title: "Convenience where it matters", description: "Delivery, collection and flexible booking options help make planning easier.", icon: Star },
+    { title: "Useful support from booking to return", description: "A dependable service for households, trades, events and business customers.", icon: Users },
   ];
   const featureStats = [
-    { value: "Car Hire", label: "Vans suited to moves, deliveries, collections and everyday transport jobs." },
-    { value: "Van Hire", label: "Cars for short-term use, replacement travel and general day-to-day driving." },
-    { value: "Minibus Hire", label: "Minibuses for group outings, events and organised transport needs." },
-    { value: "Truck Hire", label: "Trucks for larger loads, heavier work and commercial transport tasks." },
+    { value: "Car Hire", label: "Vans for moving house, trade work, online sales collections and everyday transport jobs." },
+    { value: "Van Hire", label: "Cars for local travel, temporary replacement needs and business mileage." },
+    { value: "Minibus Hire", label: "Minibuses for club trips, family events and shared travel planning." },
+    { value: "Truck Hire", label: "Trucks for larger loads, heavier materials and more demanding work use." },
   ];
   const vehicleCards = [
     { src: "/images/smallvan1.jpg", alt: "Small van hire vehicle", title: "Small Vans" },
@@ -52,9 +60,9 @@ export default function LocationPage() {
     { src: "/images/7.5tonnecurtainsidehire.jpg", alt: "7.5 tonne curtainside truck hire vehicle", title: "Truck Hire" },
   ];
   const benefits = [
-    { icon: BadgePoundSterling, title: "Broad vehicle choice", description: "Choose the right size and type of vehicle for a home move, group trip, business task or temporary replacement.", detail: "That means fewer compromises and a better fit for the journey you have planned." },
-    { icon: Clock3, title: "Hire terms that suit the job", description: "Flexible hire periods help whether you need transport for a single day, a busy week or a longer stretch.", detail: "We aim to keep booking practical rather than forcing customers into a one-size-fits-all arrangement." },
-    { icon: CheckCircle2, title: "Less running around", description: "Delivery and collection options can save time and help you organise the hire around work, moving day or event timings.", detail: "It is a useful option when collecting a vehicle yourself would add extra pressure to the day." },
+    { icon: BadgePoundSterling, title: "Right vehicle for the task", description: "Choose a vehicle that matches the size of the job rather than making do with whatever is left.", detail: "From compact cars to larger vans, minibuses and trucks, we help you hire with purpose." },
+    { icon: Clock3, title: "Flexible terms", description: "Short hires and longer bookings can both be arranged depending on what you need.", detail: "That makes it easier for home projects, seasonal work, temporary cover and planned travel." },
+    { icon: CheckCircle2, title: "Straightforward service", description: "Vehicle hire should be easy to organise and clear from the outset.", detail: "We focus on practical support, sensible options and a service that fits around everyday schedules." },
   ];
 
   return (
@@ -103,8 +111,8 @@ export default function LocationPage() {
           <div className="relative z-10 grid gap-12 lg:grid-cols-[1fr_420px] lg:items-center">
             <div className="max-w-3xl">
               <div className="flex flex-col gap-6">
-                <h1 className="text-5xl font-bold tracking-tight">{"Fair Oak Vehicle Hire for Work, Moving and Travel"}</h1>
-                <p className="text-xl text-white">{"Reliable self-drive vans, cars, minibuses and trucks with flexible hire periods, maintained vehicles and helpful local support."}</p>
+                <h1 className="text-5xl font-bold tracking-tight">{"Vehicle Hire in Botley"}</h1>
+                <p className="text-xl text-white">{"Straightforward vehicle hire in Botley with flexible booking, maintained vans, cars, minibuses and trucks, plus practical help for home, business and longer-distance travel."}</p>
                 <Button size="lg" className="w-fit bg-[#00B395] text-white hover:bg-[#00997f]" asChild>
                   <a href={phoneHref}>Book Now</a>
                 </Button>
@@ -127,18 +135,18 @@ export default function LocationPage() {
               <div className="max-w-2xl">
                 <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-[#00B395]/25 bg-white px-3 py-1 text-sm font-medium text-[#00B395]">
                   <PhoneCall className="h-4 w-4" />
-                  {"Easy booking support"}
+                  {"Simple to arrange"}
                 </div>
-                <h2 className="text-2xl font-bold tracking-tight text-slate-950 md:text-3xl">{"Book the right hire vehicle for Fair Oak"}</h2>
-                <p className="mt-3 text-base leading-7 text-slate-600">{"Hiring in Fair Oak should be straightforward. We help match the vehicle to the job, explain the booking clearly, and arrange timings that work as smoothly as possible for local customers."}</p>
+                <h2 className="text-2xl font-bold tracking-tight text-slate-950 md:text-3xl">{"Arrange vehicle hire in Botley with less hassle"}</h2>
+                <p className="mt-3 text-base leading-7 text-slate-600">{"If you need a hire vehicle in Botley, we make it easier to sort the essentials quickly. Our service is built around practical transport needs, whether that means a short local booking or a vehicle for wider Hampshire travel."}</p>
                 <div className="mt-5 flex flex-wrap gap-3 text-sm text-slate-600">
                   <div className="inline-flex items-center gap-2 rounded-full bg-white px-4 py-2 shadow-sm">
                     <PhoneCall className="h-4 w-4 text-[#00B395]" />
-                    {"Short and longer hires"}
+                    {"Wide vehicle choice"}
                   </div>
                   <div className="inline-flex items-center gap-2 rounded-full bg-white px-4 py-2 shadow-sm">
                     <Clock3 className="h-4 w-4 text-[#00B395]" />
-                    {"Maintained self-drive vehicles"}
+                    {"Support for home and business use"}
                   </div>
                 </div>
               </div>
@@ -153,8 +161,8 @@ export default function LocationPage() {
       <section id="trust" className="px-6 py-16">
         <div className="mx-auto max-w-6xl">
           <div className="mb-12 text-center">
-            <h2 className="mb-4 text-4xl font-bold">{"A service Fair Oak customers can rely on"}</h2>
-            <p className="text-lg text-muted-foreground">{"When customers in Fair Oak compare vehicle hire options, they usually want reliability, useful choice and clear booking support. We keep our service focused on those basics."}</p>
+            <h2 className="mb-4 text-4xl font-bold">{"Why Botley customers choose Southern Van Hire"}</h2>
+            <p className="text-lg text-muted-foreground">{"Botley customers rely on us for straightforward vehicle hire backed by maintained vehicles, practical service and a broad choice of self-drive options."}</p>
           </div>
           <div className="grid gap-8 md:grid-cols-3 md:auto-rows-fr">
             {trustCards.map((item) => (
@@ -173,9 +181,9 @@ export default function LocationPage() {
       <section className="bg-white px-6 py-20 text-slate-950">
         <div className="mx-auto grid max-w-6xl gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
           <div>
-            <p className="mb-4 text-sm font-semibold uppercase tracking-[0.3em] text-[#00B395]">{"Vehicle types available"}</p>
-            <h2 className="max-w-2xl text-4xl font-bold tracking-tight md:text-5xl">{"From vans to trucks, we cover Fair Oak hire needs"}</h2>
-            <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-600">{"We offer more than standard van hire in Fair Oak, giving customers access to a practical range of self-drive vehicles."}</p>
+            <p className="mb-4 text-sm font-semibold uppercase tracking-[0.3em] text-[#00B395]">{"What you can hire"}</p>
+            <h2 className="max-w-2xl text-4xl font-bold tracking-tight md:text-5xl">{"Vehicle hire options for Botley drivers"}</h2>
+            <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-600">{"Botley customers use our vehicles for everything from village moves and retail collection runs to business support and longer journeys across Hampshire and beyond."}</p>
             <div className="mt-8 flex flex-wrap gap-4">
               <Button size="lg" className="bg-[#00B395] text-white hover:bg-[#00997f]" asChild>
                 <a href={phoneHref}>No Hassle Booking {phoneDisplay}</a>
@@ -195,13 +203,13 @@ export default function LocationPage() {
 
       <section className="bg-white px-6 py-20">
         <div className="mx-auto max-w-5xl text-center">
-          <p className="mb-4 text-sm font-semibold uppercase tracking-[0.3em] text-[#00B395]">{"Local hire support"}</p>
-          <h2 className="mx-auto max-w-3xl text-4xl font-bold tracking-tight text-slate-950 md:text-5xl">{"Straightforward vehicle hire for Fair Oak residents and businesses"}</h2>
+          <p className="mb-4 text-sm font-semibold uppercase tracking-[0.3em] text-[#00B395]">{"About the service"}</p>
+          <h2 className="mx-auto max-w-3xl text-4xl font-bold tracking-tight text-slate-950 md:text-5xl">{"Reliable vehicle hire for Botley and nearby routes"}</h2>
           <div className="mx-auto mt-8 max-w-3xl space-y-6 text-lg leading-8 text-slate-600">
-            <p>{"Fair Oak sits in a useful position for drivers who need quick access towards Eastleigh, Winchester, Hedge End and the wider M3 and M27 routes. That makes it a practical place to hire a vehicle for both local jobs and longer trips."}</p>
-            <p>{"Some bookings are for house moves and furniture collections, while others are for business transport, event travel or short-term cover when a regular vehicle is unavailable. We keep the service broad enough to support all of those needs."}</p>
-            <p>{"Southern Van Hire offers vans, cars, minibuses and trucks, so customers are not limited to one vehicle type. If a smaller option will do the job, we can help with that, and if you need more carrying capacity, we can help there too."}</p>
-            <p>{"What matters most is making the hire practical. That means clear communication, well-maintained vehicles and flexible arrangements that fit around real travel plans rather than creating more work for the customer."}</p>
+            <p>{"Botley customers often need vehicle hire that fits around real day-to-day jobs rather than a complicated booking process. Whether you are moving home, collecting materials, covering business transport or arranging a larger passenger vehicle, we offer practical options that keep things simple."}</p>
+            <p>{"Because Botley sits in a useful position for routes towards Southampton, the M27 and surrounding villages, hired vehicles are often used for both local errands and wider regional travel. We help match the vehicle to the job so you are not paying for more space than you need or struggling with too little."}</p>
+            <p>{"For customers around Botley village and the surrounding semi-rural areas, convenience matters just as much as vehicle quality. We aim to keep booking clear and flexible, with delivery and collection options available where suitable."}</p>
+            <p>{"If you need vehicle hire in Botley, Southern Van Hire offers a straightforward service built around reliability, flexibility and useful support. From one-off domestic jobs to regular business requirements, we aim to make getting the right vehicle as easy and stress-free as possible."}</p>
           </div>
         </div>
       </section>
@@ -210,9 +218,9 @@ export default function LocationPage() {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(0,179,149,0.14),_transparent_55%)] pointer-events-none" />
         <div className="mx-auto max-w-6xl">
           <div className="mx-auto mb-14 max-w-3xl text-center">
-            <p className="mb-4 text-sm font-semibold uppercase tracking-[0.3em] text-[#00B395]">{"What makes booking easier"}</p>
-            <h2 className="text-4xl font-bold tracking-tight text-slate-950 md:text-5xl">{"Benefits of hiring with us in Fair Oak"}</h2>
-            <p className="mt-5 text-lg leading-8 text-slate-600">{"Useful reasons many local customers choose us when comparing vehicle hire in Fair Oak."}</p>
+            <p className="mb-4 text-sm font-semibold uppercase tracking-[0.3em] text-[#00B395]">{"Why it works"}</p>
+            <h2 className="text-4xl font-bold tracking-tight text-slate-950 md:text-5xl">{"Useful advantages for Botley vehicle hire"}</h2>
+            <p className="mt-5 text-lg leading-8 text-slate-600">{"Three practical reasons customers in Botley use Southern Van Hire for self-drive transport."}</p>
           </div>
           <div className="grid gap-8 md:grid-cols-3">
             {benefits.map((item) => (
@@ -254,8 +262,8 @@ export default function LocationPage() {
         <div className="mx-auto max-w-5xl">
           <div className="mx-auto max-w-3xl text-center">
             <p className="mb-4 text-sm font-semibold uppercase tracking-[0.3em] text-[#00B395]">{"Nearby Locations"}</p>
-            <h2 className="text-3xl font-bold tracking-tight text-slate-950 md:text-4xl">{"Other locations close to Fair Oak"}</h2>
-            <p className="mt-4 text-lg leading-8 text-slate-600">{"We also support customers in nearby communities around Eastleigh, Winchester and the villages that connect through this part of Hampshire."}</p>
+            <h2 className="text-3xl font-bold tracking-tight text-slate-950 md:text-4xl">{"Nearby areas around Botley we also cover"}</h2>
+            <p className="mt-4 text-lg leading-8 text-slate-600">{"We also serve surrounding places that connect naturally with Botley for local journeys, business travel and wider Hampshire routes."}</p>
           </div>
           <div className="mt-8 flex flex-wrap justify-center gap-3">
             {locationLinks.map((location) => (
@@ -266,16 +274,16 @@ export default function LocationPage() {
           </div>
           <div className="mt-12 grid gap-6 md:grid-cols-3">
             <div className="rounded-3xl border border-slate-200 bg-slate-50 p-6 shadow-sm">
-              <h3 className="text-2xl font-semibold tracking-tight text-slate-950">{"Suitable for personal and business use"}</h3>
-              <p className="mt-3 text-base leading-7 text-slate-600">{"Our rental range covers practical transport for households, trades, businesses, teams and organised travel."}</p>
+              <h3 className="text-2xl font-semibold tracking-tight text-slate-950">{"Options for different jobs"}</h3>
+              <p className="mt-3 text-base leading-7 text-slate-600">{"We offer a broad mix of rental vehicles so you can book according to passenger needs, load size and journey type."}</p>
             </div>
             <div className="rounded-3xl border border-slate-200 bg-slate-50 p-6 shadow-sm">
-              <h3 className="text-2xl font-semibold tracking-tight text-slate-950">{"Vehicles prepared for everyday use"}</h3>
-              <p className="mt-3 text-base leading-7 text-slate-600">{"A modern, well-kept hire vehicle helps make collections, deliveries and longer journeys feel more manageable."}</p>
+              <h3 className="text-2xl font-semibold tracking-tight text-slate-950">{"Dependable day-to-day hire"}</h3>
+              <p className="mt-3 text-base leading-7 text-slate-600">{"Maintained vehicles and straightforward support help keep your booking simple from start to finish."}</p>
             </div>
             <div className="rounded-3xl border border-slate-200 bg-slate-50 p-6 shadow-sm">
-              <h3 className="text-2xl font-semibold tracking-tight text-slate-950">{"Built around real schedules"}</h3>
-              <p className="mt-3 text-base leading-7 text-slate-600">{"Flexible booking options make it easier to line the hire up with move dates, work schedules and event plans."}</p>
+              <h3 className="text-2xl font-semibold tracking-tight text-slate-950">{"Suitable for work or personal use"}</h3>
+              <p className="mt-3 text-base leading-7 text-slate-600">{"Useful for private customers, local firms, planned trips and temporary transport cover."}</p>
             </div>
           </div>
         </div>
@@ -285,14 +293,14 @@ export default function LocationPage() {
         <div className="mx-auto max-w-5xl">
           <div className="mx-auto max-w-3xl text-center">
             <p className="mb-4 text-sm font-semibold uppercase tracking-[0.3em] text-[#00B395]">{"Local Guide"}</p>
-            <h2 className="text-4xl font-bold tracking-tight text-slate-950 md:text-5xl">{"Fair Oak driving guide"}</h2>
-            <p className="mt-5 text-lg leading-8 text-slate-600">{"Useful driving and route-planning notes for getting the most from vehicle hire in and around Fair Oak."}</p>
+            <h2 className="text-4xl font-bold tracking-tight text-slate-950 md:text-5xl">{"Botley driver guide"}</h2>
+            <p className="mt-5 text-lg leading-8 text-slate-600">{"Useful local driving notes for getting the most from vehicle hire in and around Botley."}</p>
           </div>
           <div className="mx-auto mt-12 max-w-4xl space-y-6 text-left">
-            <p className="text-base leading-8 text-slate-600">{"Fair Oak sits in a practical spot for local vehicle hire, with Eastleigh Road and Fair Oak Road giving straightforward access in and out of the village for day trips, home moves and business collections. If you are collecting furniture, loading stock or heading out with a larger vehicle, it helps to plan around school-run periods and the busier village centre stretches."}</p>
-            <p className="text-base leading-8 text-slate-600">{"For short local runs, the roads around Fair Oak are usually simple to navigate, but some residential sections can feel tighter in a longer van or truck. Trafford Road and Latham Road are useful reference points when planning local access, and taking a little extra care with parking and turning space can make collections and drop-offs much easier."}</p>
-            <p className="text-base leading-8 text-slate-600">{"Many hires in Fair Oak are for practical jobs rather than long-distance travel, such as moving between homes, collecting bulky purchases or covering short-term business transport. Choosing the right size vehicle matters here, especially if you expect to use side streets, shared driveways or smaller unloading areas around the village."}</p>
-            <p className="text-base leading-8 text-slate-600">{"If your journey starts in Fair Oak and continues further across the Eastleigh area, it is worth checking your route before setting off, particularly if you are unfamiliar with a larger self-drive vehicle. A bit of advance planning for loading, parking and the quieter approach roads can save time and make the whole hire feel far more straightforward."}</p>
+            <p className="text-base leading-8 text-slate-600">{"Botley works well for local vehicle hire because it sits between village roads and wider Eastleigh routes, so you can get a van, car, minibus or truck where you need it without dealing with a big city centre start. For smaller moves, furniture collection or day-to-day transport jobs, hiring from the Botley area gives you a practical base with straightforward access into the wider district."}</p>
+            <p className="text-base leading-8 text-slate-600">{"If you are planning a longer run, it helps to think ahead about the type of roads you will be using. Botley has a more relaxed pace than larger nearby centres, but some roads can feel tighter through built-up stretches, so choosing the right size of vehicle matters. A compact van or car is often easier for local errands, while larger vans and trucks are better suited to planned routes where loading space is the priority."}</p>
+            <p className="text-base leading-8 text-slate-600">{"For drivers making collections, deliveries or home move trips, it is worth sorting loading points and parking before setting off. Around Botley, that simple preparation can save time, especially if you are visiting residential roads, village properties or small business premises. If you need a quick stop before heading out, a nearby service station around Broad Oak can be a useful point for fuel, directions or a short pause."}</p>
+            <p className="text-base leading-8 text-slate-600">{"Many customers hiring in Botley are looking for practical transport rather than anything complicated, whether that is moving boxes, collecting bulky items or arranging extra vehicles for business use. The best approach is usually to book a vehicle that matches the job, allow a bit of extra time for local access, and keep your route simple. That makes Botley a sensible pickup area for straightforward self-drive hire across the wider Eastleigh side of Hampshire."}</p>
           </div>
         </div>
       </section>
@@ -300,9 +308,9 @@ export default function LocationPage() {
       <section className="bg-white px-6 py-20">
         <div className="mx-auto max-w-4xl">
           <div className="mb-12 text-center">
-            <p className="mb-4 text-sm font-semibold uppercase tracking-[0.3em] text-[#00B395]">{"Helpful booking answers"}</p>
-            <h2 className="text-4xl font-bold tracking-tight text-slate-950 md:text-5xl">{"Fair Oak vehicle hire FAQs"}</h2>
-            <p className="mt-4 text-lg leading-8 text-slate-600">{"Common questions about hiring a vehicle in Fair Oak, from booking times to available vehicle types."}</p>
+            <p className="mb-4 text-sm font-semibold uppercase tracking-[0.3em] text-[#00B395]">{"Botley FAQs"}</p>
+            <h2 className="text-4xl font-bold tracking-tight text-slate-950 md:text-5xl">{"Common questions about Botley vehicle hire"}</h2>
+            <p className="mt-4 text-lg leading-8 text-slate-600">{"Helpful answers for customers arranging self-drive hire in Botley and the surrounding area."}</p>
           </div>
           <div className="rounded-3xl border border-slate-200 bg-slate-50 px-6 shadow-sm">
             {faqs.map((item, index) => (
@@ -320,8 +328,8 @@ export default function LocationPage() {
 
       <section className="bg-[#00B395] px-6 py-16 text-center text-white">
         <div className="mx-auto max-w-2xl">
-          <h2 className="mb-4 text-4xl font-bold">{"Planning a Fair Oak vehicle hire?"}</h2>
-          <p className="mb-8 text-lg text-white/85">{"Speak to Southern Van Hire for practical help choosing a vehicle and arranging flexible self-drive hire in Fair Oak."}</p>
+          <h2 className="mb-4 text-4xl font-bold">{"Book Botley vehicle hire that fits the job"}</h2>
+          <p className="mb-8 text-lg text-white/85">{"Get in touch to arrange a practical hire vehicle for Botley, whether you need a van for a job, a car for temporary use, a minibus for group travel or a truck for heavier loads."}</p>
           <Button size="lg" className="bg-white text-[#00B395] hover:bg-gray-100" asChild>
             <a href={phoneHref}>Book Now</a>
           </Button>
